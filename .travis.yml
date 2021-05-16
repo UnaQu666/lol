@@ -8,7 +8,7 @@ before_install:
   - pip install --user cpp-coveralls
 addons:
   sonarcloud:
-    organization: "deadman23ru"
+    organization: "unaqu666"
     token: $SONAR_TOKEN
 
 script:
