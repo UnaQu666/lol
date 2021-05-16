@@ -7,7 +7,6 @@ language:
 before_install:
   - pip install --user cpp-coveralls
 
-travis encrypt 6e54535b08435de530c5992c23c89faecb4e2917
 
 addons:
   sonarcloud:
