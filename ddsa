@@ -1,0 +1,2398 @@
+[33mcommit 8d6d2126d0fc20e8d30b1dcc11a98f2d74e2dfbb[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mnew-branch[m[33m, [m[1;31morigin/new-branch[m[33m)[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Fri Nov 1 03:20:59 2024 +0300
+
+    git commit
+
+[1mdiff --git a/qwertyqweerr b/qwertyqweerr[m
+[1mindex f893d63..fbe05af 100644[m
+[1m--- a/qwertyqweerr[m
+[1m+++ b/qwertyqweerr[m
+[36m@@ -1,2 +1,3 @@[m
+ qweqrtrqrwqqewqe[m
+ wqerwqewqeqweqwe[m
+[32m+[m[32mqweeergit[m
+\ No newline at end of file[m
+
+[33mcommit 01aaf8d63cc25dbf2627e3ce030aa6a274db36c4[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Fri Nov 1 03:06:34 2024 +0300
+
+    Удаление
+
+[1mdiff --git a/qwerty 2 b/qwerty 2[m
+[1mdeleted file mode 100644[m
+[1mindex 388a08b..0000000[m
+[1m--- a/qwerty 2[m	
+[1m+++ /dev/null[m
+[36m@@ -1 +0,0 @@[m
+[31m-qwerty 2[m
+
+[33mcommit ed3c07e9fabe0a116ab8c2f92dc6d65479febdb2[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Fri Nov 1 03:06:19 2024 +0300
+
+    создание
+
+[1mdiff --git a/qwerty 2 b/qwerty 2[m
+[1mnew file mode 100644[m
+[1mindex 0000000..388a08b[m
+[1m--- /dev/null[m
+[1m+++ b/qwerty 2[m	
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mqwerty 2[m
+
+[33mcommit 741c037dbd7c168117cf1a13a10f52205d9652da[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Fri Nov 1 03:05:10 2024 +0300
+
+    2 обновление
+
+[1mdiff --git a/qwertyqweerr b/qwertyqweerr[m
+[1mindex 443d48e..f893d63 100644[m
+[1m--- a/qwertyqweerr[m
+[1m+++ b/qwertyqweerr[m
+[36m@@ -1 +1,2 @@[m
+ qweqrtrqrwqqewqe[m
+[32m+[m[32mwqerwqewqeqweqwe[m
+
+[33mcommit 4bb57c2a8a65d8641d54a9afaca96f98f3b380a2[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Fri Nov 1 03:03:46 2024 +0300
+
+    adddddadadadadad
+
+[1mdiff --git a/qwertyqweerr b/qwertyqweerr[m
+[1mnew file mode 100644[m
+[1mindex 0000000..443d48e[m
+[1m--- /dev/null[m
+[1m+++ b/qwertyqweerr[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mqweqrtrqrwqqewqe[m
+
+[33mcommit 6bd1d7fbb25e015e7b64e242dd7af3bb19919c66[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 03:26:16 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex b3f262b..2f22215 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -13,23 +13,16 @@[m [maddons:[m
+     organization: "unaqu666"[m
+     token: $SONAR_TOKEN[m
+ [m
+[31m-[m
+ script:[m
+[31m-  # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+[31m-  # later by the SonarScanner) into the "bw-output" folder[m
+[31m-  - build-wrapper-linux-x86-64 --out-dir bw-output <your clean build command>[m
+[31m-  # And finally run the SonarCloud analysis - read the "sonar-project.properties"[m
+[31m-  # file to see the specific configuration[m
+[31m-  - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output[m
+[32m+[m[32m    - qmake[m[41m [m
+[32m+[m[32m    - make[m
+[32m+[m[32m    - ./tests/tests[m
+   [m
+ after_success:[m
+[31m-  - coveralls --root . -E ".*external.*" -E ".*tests.*"[m
+[31m-  # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+[31m-  # later by the SonarScanner) into the "bw-output" folder[m
+[31m-  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all[m
+[31m-  # And finally run the SonarCloud analysis - read the "sonar-project.properties"[m
+[31m-  # file to see the specific configuration[m
+[31m-  - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output[m
+[32m+[m[32m    - coveralls --root . -E ".*external.*" -E ".*tests.*"[m
+[32m+[m[32m    - build-wrapper-linux-x86-64 --out-dir bw-output make clean all[m
+[32m+[m[32m    - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output[m
+[32m+[m[41m    [m
+ [m
+ cache:[m
+   directories:[m
+
+[33mcommit dcca599512d68bda90794f5ec125836afcd63aa1[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:50:04 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex 950e142..b3f262b 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -12,7 +12,7 @@[m [maddons:[m
+   sonarcloud:[m
+     organization: "unaqu666"[m
+     token: $SONAR_TOKEN[m
+[31m-      secure: "441e9825c1fd74e6c5de071b62e25bb363bb671a" # encrypted value of your token[m
+[32m+[m
+ [m
+ script:[m
+   # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+
+[33mcommit 7978733ae0b8ece3e478053f466addb495076ca4[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:47:10 2021 +0300
+
+    Update README.md
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 4ec7c1a..d0586c6 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,2 +1,3 @@[m
+ [![Build Status](https://travis-ci.org/UnaQu666/lol.svg?branch=main)](https://travis-ci.org/UnaQu666/lol)[m
+ [![Coverage Status](https://coveralls.io/repos/github/UnaQu666/lol/badge.svg)](https://coveralls.io/github/UnaQu666/lol)[m
+[32m+[m[32m[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=UnaQu666_lol&metric=alert_status)](https://sonarcloud.io/dashboard?id=UnaQu_lol)[m
+
+[33mcommit 034b0062d7c2e41272d29e5e9eeb4b21fa520d05[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:42:40 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex ceea7b5..950e142 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -12,7 +12,7 @@[m [maddons:[m
+   sonarcloud:[m
+     organization: "unaqu666"[m
+     token: $SONAR_TOKEN[m
+[31m-      secure: "6e54535b08435de530c5992c23c89faecb4e2917" # encrypted value of your token[m
+[32m+[m[32m      secure: "441e9825c1fd74e6c5de071b62e25bb363bb671a" # encrypted value of your token[m
+ [m
+ script:[m
+   # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+
+[33mcommit 6d7814455e1fa46daa0a48c8cccaa1cba5393529[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:36:47 2021 +0300
+
+    Update sonar-project.properties
+
+[1mdiff --git a/sonar-project.properties b/sonar-project.properties[m
+[1mindex 0a59c84..194143b 100644[m
+[1m--- a/sonar-project.properties[m
+[1m+++ b/sonar-project.properties[m
+[36m@@ -2,7 +2,7 @@[m [msonar.projectKey=UnaQu666_lol[m
+ sonar.organization=unaqu666[m
+ [m
+ # This is the name and version displayed in the SonarCloud UI.[m
+[31m-#sonar.projectName=Lab1[m
+[32m+[m[32m#sonar.projectName=lol[m
+ #sonar.projectVersion=1.0[m
+ [m
+ # Path is relative to the sonar-project.properties file. Replace "\" by "/" on Windows.[m
+
+[33mcommit 617442ea6dc54f675752634fe648e5789b1d412d[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:32:36 2021 +0300
+
+    Update sonar-project.properties
+
+[1mdiff --git a/sonar-project.properties b/sonar-project.properties[m
+[1mindex d294c17..0a59c84 100644[m
+[1m--- a/sonar-project.properties[m
+[1m+++ b/sonar-project.properties[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-sonar.projectKey=UnaQu666_Lab1[m
+[32m+[m[32msonar.projectKey=UnaQu666_lol[m
+ sonar.organization=unaqu666[m
+ [m
+ # This is the name and version displayed in the SonarCloud UI.[m
+
+[33mcommit 27048865ed2d8540ad94dc11ca266593e2abfe92[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:31:38 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex 7102013..ceea7b5 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -21,6 +21,7 @@[m [mscript:[m
+   # And finally run the SonarCloud analysis - read the "sonar-project.properties"[m
+   # file to see the specific configuration[m
+   - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output[m
+[32m+[m[41m  [m
+ after_success:[m
+   - coveralls --root . -E ".*external.*" -E ".*tests.*"[m
+   # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+
+[33mcommit 8af71e033fb06a700b38b74420df2933eeaea2a4[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:31:17 2021 +0300
+
+    Update README.md
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 1f4dd4a..4ec7c1a 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,4 +1,2 @@[m
+ [![Build Status](https://travis-ci.org/UnaQu666/lol.svg?branch=main)](https://travis-ci.org/UnaQu666/lol)[m
+ [![Coverage Status](https://coveralls.io/repos/github/UnaQu666/lol/badge.svg)](https://coveralls.io/github/UnaQu666/lol)[m
+[31m-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=unaqu666_lol&metric=alert_status)](https://sonarcloud.io/dashboard?id=unaqu666_lol)[m
+[31m-# lol[m
+
+[33mcommit 250fedd24500c9ef359c5e60fc5ed7cbb207776e[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:28:55 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex de94f19..7102013 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -11,7 +11,7 @@[m [mbefore_install:[m
+ addons:[m
+   sonarcloud:[m
+     organization: "unaqu666"[m
+[31m-    token:[m
+[32m+[m[32m    token: $SONAR_TOKEN[m
+       secure: "6e54535b08435de530c5992c23c89faecb4e2917" # encrypted value of your token[m
+ [m
+ script:[m
+
+[33mcommit 6819f172da18191a025961da711c641941f5cde1[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:25:03 2021 +0300
+
+    Update sonar-project.properties
+
+[1mdiff --git a/sonar-project.properties b/sonar-project.properties[m
+[1mindex 2b31885..d294c17 100644[m
+[1m--- a/sonar-project.properties[m
+[1m+++ b/sonar-project.properties[m
+[36m@@ -1,22 +1,12 @@[m
+[31m-# must be unique in a given SonarQube instance[m
+[31m-sonar.projectKey=deadman23ru_gtest-master[m
+[31m-sonar.organization=deadman23ru[m
+[31m-# this is the name and version displayed in the SonarQube UI. Was mandatory prior to SonarQube 6.1.[m
+[31m-#sonar.projectName=gtest-master[m
+[31m-#sonar.projectVersion=9.0[m
+[31m- [m
+[31m-# Path is relative to the sonar-project.properties file. Replace "\" by "/" on Windows.[m
+[31m-# This property is optional if sonar.modules is set. [m
+[31m-#sonar.exclusions=external/**[m
+[31m-#sonar.cfamily.gcov.reportsPath=.[m
+[32m+[m[32msonar.projectKey=UnaQu666_Lab1[m
+[32m+[m[32msonar.organization=unaqu666[m
+ [m
+[31m-# Encoding of the source code. Default is default system encoding[m
+[31m-sonar.sourceEncoding=UTF-8[m
+[31m-#[m
+[31m-#sonar.cfamily.build-wrapper-output=bw-output[m
+[31m-#sonar.c.file.suffixes=-[m
+[31m-#sonar.cpp.file.suffixes=-[m
+[31m-#sonar.objc.file.suffixes=-[m
+[31m-#sonar.host.url=https://sonarcloud.io[m
+[32m+[m[32m# This is the name and version displayed in the SonarCloud UI.[m
+[32m+[m[32m#sonar.projectName=Lab1[m
+[32m+[m[32m#sonar.projectVersion=1.0[m
+ [m
+[32m+[m[32m# Path is relative to the sonar-project.properties file. Replace "\" by "/" on Windows.[m
+[32m+[m[32m#sonar.sources=.[m
+ [m
+[32m+[m[32m# Encoding of the source code. Default is default system encoding[m
+[32m+[m[32m#sonar.sourceEncoding=UTF-8[m
+
+[33mcommit 0b5162766668548223f6f5f7769221660ba994a9[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:24:11 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex b06568d..de94f19 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -12,7 +12,7 @@[m [maddons:[m
+   sonarcloud:[m
+     organization: "unaqu666"[m
+     token:[m
+[31m-      secure: "travis encrypt 6e54535b08435de530c5992c23c89faecb4e2917" # encrypted value of your token[m
+[32m+[m[32m      secure: "6e54535b08435de530c5992c23c89faecb4e2917" # encrypted value of your token[m
+ [m
+ script:[m
+   # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+
+[33mcommit 2e059d260cacc65e3237e1cf2022afc31357107f[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:23:43 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex 3a16bd7..b06568d 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -7,7 +7,6 @@[m [mlanguage:[m
+ before_install:[m
+   - pip install --user cpp-coveralls[m
+ [m
+[31m-travis encrypt 6e54535b08435de530c5992c23c89faecb4e2917[m
+ [m
+ addons:[m
+   sonarcloud:[m
+
+[33mcommit 511262419b6ffa93e46d5c064ab736ca5cf9488e[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:23:19 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex 6a8d02b..3a16bd7 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -6,16 +6,22 @@[m [mlanguage:[m
+ [m
+ before_install:[m
+   - pip install --user cpp-coveralls[m
+[32m+[m
+[32m+[m[32mtravis encrypt 6e54535b08435de530c5992c23c89faecb4e2917[m
+[32m+[m
+ addons:[m
+   sonarcloud:[m
+     organization: "unaqu666"[m
+[31m-    token: $SONAR_TOKEN[m
+[32m+[m[32m    token:[m
+[32m+[m[32m      secure: "travis encrypt 6e54535b08435de530c5992c23c89faecb4e2917" # encrypted value of your token[m
+ [m
+ script:[m
+[31m-  - qmake[m
+[31m-  - make[m
+[31m-  - ./tests/tests[m
+[31m-[m
+[32m+[m[32m  # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+[32m+[m[32m  # later by the SonarScanner) into the "bw-output" folder[m
+[32m+[m[32m  - build-wrapper-linux-x86-64 --out-dir bw-output <your clean build command>[m
+[32m+[m[32m  # And finally run the SonarCloud analysis - read the "sonar-project.properties"[m
+[32m+[m[32m  # file to see the specific configuration[m
+[32m+[m[32m  - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output[m
+ after_success:[m
+   - coveralls --root . -E ".*external.*" -E ".*tests.*"[m
+   # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+
+[33mcommit 8cada955b9cf7ccfe69a1994c812a3c7745974e4[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:19:21 2021 +0300
+
+    Update README.md
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex de236c4..1f4dd4a 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,4 +1,4 @@[m
+ [![Build Status](https://travis-ci.org/UnaQu666/lol.svg?branch=main)](https://travis-ci.org/UnaQu666/lol)[m
+[31m-[![Coverage Status](https://coveralls.io/repos/unaqu666/lol/badge.svg?branch=main)](https://coveralls.io/github/unaqu666/lol?branch=main)[m
+[32m+[m[32m[![Coverage Status](https://coveralls.io/repos/github/UnaQu666/lol/badge.svg)](https://coveralls.io/github/UnaQu666/lol)[m
+ [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=unaqu666_lol&metric=alert_status)](https://sonarcloud.io/dashboard?id=unaqu666_lol)[m
+ # lol[m
+
+[33mcommit 86a0bba9209fa9bcdf30172e803a28bc7c67d9d1[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:16:10 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex c6325d2..6a8d02b 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -2,7 +2,7 @@[m [mos: linux[m
+ dist: xenial[m
+ [m
+ language:[m
+[31m-  - c[m
+[32m+[m[32m  - cpp[m
+ [m
+ before_install:[m
+   - pip install --user cpp-coveralls[m
+
+[33mcommit 69969d1a1e97984103557dbbfbc7de9181499da6[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:08:21 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex 6a8d02b..c6325d2 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -2,7 +2,7 @@[m [mos: linux[m
+ dist: xenial[m
+ [m
+ language:[m
+[31m-  - cpp[m
+[32m+[m[32m  - c[m
+ [m
+ before_install:[m
+   - pip install --user cpp-coveralls[m
+
+[33mcommit 20ef866c7083d6fb17bc099d9d69b19989c567ea[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:05:43 2021 +0300
+
+    Update README.md
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex ab8075c..de236c4 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,4 +1,4 @@[m
+ [![Build Status](https://travis-ci.org/UnaQu666/lol.svg?branch=main)](https://travis-ci.org/UnaQu666/lol)[m
+[31m-[![Coverage Status](https://coveralls.io/repos/unaqu666/gtest-master/badge.svg?branch=main)](https://coveralls.io/github/unaqu666/gtest-master?branch=main)[m
+[31m-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=unaqu666_gtest-master&metric=alert_status)](https://sonarcloud.io/dashboard?id=unaqu666_gtest-master)[m
+[32m+[m[32m[![Coverage Status](https://coveralls.io/repos/unaqu666/lol/badge.svg?branch=main)](https://coveralls.io/github/unaqu666/lol?branch=main)[m
+[32m+[m[32m[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=unaqu666_lol&metric=alert_status)](https://sonarcloud.io/dashboard?id=unaqu666_lol)[m
+ # lol[m
+
+[33mcommit 1361a1479c77f446618c42955c9304f0e40deeb4[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 02:00:22 2021 +0300
+
+    Update README.md
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex ae7ead7..ab8075c 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-[![Build Status](https://travis-ci.org/unaqu666/gtest-master.svg?branch=main)](https://travis-ci.org/unaqu666/gtest-master)[m
+[32m+[m[32m[![Build Status](https://travis-ci.org/UnaQu666/lol.svg?branch=main)](https://travis-ci.org/UnaQu666/lol)[m
+ [![Coverage Status](https://coveralls.io/repos/unaqu666/gtest-master/badge.svg?branch=main)](https://coveralls.io/github/unaqu666/gtest-master?branch=main)[m
+ [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=unaqu666_gtest-master&metric=alert_status)](https://sonarcloud.io/dashboard?id=unaqu666_gtest-master)[m
+ # lol[m
+
+[33mcommit 6d599c8e956b1a6d0bb112547b9bcc8abddb382c[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 01:55:36 2021 +0300
+
+    Update .travis.yml
+
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mindex 2d1f58a..6a8d02b 100644[m
+[1m--- a/.travis.yml[m
+[1m+++ b/.travis.yml[m
+[36m@@ -8,7 +8,7 @@[m [mbefore_install:[m
+   - pip install --user cpp-coveralls[m
+ addons:[m
+   sonarcloud:[m
+[31m-    organization: "deadman23ru"[m
+[32m+[m[32m    organization: "unaqu666"[m
+     token: $SONAR_TOKEN[m
+ [m
+ script:[m
+
+[33mcommit c61712ea786ce4c3f36d572834f8bd73d292547f[m
+Author: UnaQu666 <81961012+UnaQu666@users.noreply.github.com>
+Date:   Mon May 17 01:50:11 2021 +0300
+
+    Update README.md
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex b25edbb..ae7ead7 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-[![Build Status](https://travis-ci.org/deadman23ru/gtest-master.svg?branch=main)](https://travis-ci.org/deadman23ru/gtest-master)[m
+[31m-[![Coverage Status](https://coveralls.io/repos/deadman23ru/gtest-master/badge.svg?branch=main)](https://coveralls.io/github/deadman23ru/gtest-master?branch=main)[m
+[31m-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=deadman23ru_gtest-master&metric=alert_status)](https://sonarcloud.io/dashboard?id=deadman23ru_gtest-master)[m
+[32m+[m[32m[![Build Status](https://travis-ci.org/unaqu666/gtest-master.svg?branch=main)](https://travis-ci.org/unaqu666/gtest-master)[m
+[32m+[m[32m[![Coverage Status](https://coveralls.io/repos/unaqu666/gtest-master/badge.svg?branch=main)](https://coveralls.io/github/unaqu666/gtest-master?branch=main)[m
+[32m+[m[32m[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=unaqu666_gtest-master&metric=alert_status)](https://sonarcloud.io/dashboard?id=unaqu666_gtest-master)[m
+ # lol[m
+
+[33mcommit 49a7ed56fce7aef23fdedb7cfa97279b10fe8c07[m
+Author: VM User <bryfixe@mail.ru>
+Date:   Mon May 17 01:41:57 2021 +0300
+
+    commit
+
+[1mdiff --git a/.gitattributes b/.gitattributes[m
+[1mnew file mode 100644[m
+[1mindex 0000000..dfe0770[m
+[1m--- /dev/null[m
+[1m+++ b/.gitattributes[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m# Auto detect text files and perform LF normalization[m
+[32m+[m[32m* text=auto[m
+[1mdiff --git a/.github/workflows/build.yml b/.github/workflows/build.yml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2dff93a[m
+[1m--- /dev/null[m
+[1m+++ b/.github/workflows/build.yml[m
+[36m@@ -0,0 +1,21 @@[m
+[32m+[m[32mname: Build[m
+[32m+[m[32mon:[m
+[32m+[m[32m  push:[m
+[32m+[m[32m    branches:[m
+[32m+[m[32m      - master[m
+[32m+[m[32m  pull_request:[m
+[32m+[m[32m    types: [opened, synchronize, reopened][m
+[32m+[m[32mjobs:[m
+[32m+[m[32m  sonarcloud:[m
+[32m+[m[32m    name: SonarCloud[m
+[32m+[m[32m    runs-on: ubuntu-latest[m
+[32m+[m[32m    steps:[m
+[32m+[m[32m      - uses: actions/checkout@v2[m
+[32m+[m[32m        with:[m
+[32m+[m[32m          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis[m
+[32m+[m[32m      - name: SonarCloud Scan[m
+[32m+[m[32m        uses: SonarSource/sonarcloud-github-action@master[m
+[32m+[m[32m        env:[m
+[32m+[m[32m          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any[m
+[32m+[m[32m          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}[m
+[32m+[m
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..594785a[m
+[1m--- /dev/null[m
+[1m+++ b/.gitignore[m
+[36m@@ -0,0 +1,2 @@[m
+[32m+[m[32m*.user[m
+[32m+[m[32mbuild[m
+[1mdiff --git a/.gitmodules b/.gitmodules[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e9456dc[m
+[1m--- /dev/null[m
+[1m+++ b/.gitmodules[m
+[36m@@ -0,0 +1,5 @@[m
+[32m+[m[32m[submodule "external/googletest"][m
+[32m+[m	[32mpath = external/googletest[m
+[32m+[m	[32murl = https://github.com/google/googletest.git[m
+[32m+[m
+[32m+[m
+[1mdiff --git a/.travis.yml b/.travis.yml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2d1f58a[m
+[1m--- /dev/null[m
+[1m+++ b/.travis.yml[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32mos: linux[m
+[32m+[m[32mdist: xenial[m
+[32m+[m
+[32m+[m[32mlanguage:[m
+[32m+[m[32m  - cpp[m
+[32m+[m
+[32m+[m[32mbefore_install:[m
+[32m+[m[32m  - pip install --user cpp-coveralls[m
+[32m+[m[32maddons:[m
+[32m+[m[32m  sonarcloud:[m
+[32m+[m[32m    organization: "deadman23ru"[m
+[32m+[m[32m    token: $SONAR_TOKEN[m
+[32m+[m
+[32m+[m[32mscript:[m
+[32m+[m[32m  - qmake[m
+[32m+[m[32m  - make[m
+[32m+[m[32m  - ./tests/tests[m
+[32m+[m
+[32m+[m[32mafter_success:[m
+[32m+[m[32m  - coveralls --root . -E ".*external.*" -E ".*tests.*"[m
+[32m+[m[32m  # Wraps the compilation with the Build Wrapper to generate configuration (used[m
+[32m+[m[32m  # later by the SonarScanner) into the "bw-output" folder[m
+[32m+[m[32m  - build-wrapper-linux-x86-64 --out-dir bw-output make clean all[m
+[32m+[m[32m  # And finally run the SonarCloud analysis - read the "sonar-project.properties"[m
+[32m+[m[32m  # file to see the specific configuration[m
+[32m+[m[32m  - sonar-scanner -Dsonar.cfamily.build-wrapper-output=bw-output[m
+[32m+[m
+[32m+[m[32mcache:[m
+[32m+[m[32m  directories:[m
+[32m+[m[32m  - '$HOME/.m2/repository'[m
+[32m+[m[32m  - '$HOME/.sonar/cache'[m
+[32m+[m
+[32m+[m[32mnotifications:[m
+[32m+[m[32m  email: false[m
+[32m+[m[41m  [m
+[32m+[m[41m  [m
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b25edbb[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,4 @@[m
+[32m+[m[32m[![Build Status](https://travis-ci.org/deadman23ru/gtest-master.svg?branch=main)](https://travis-ci.org/deadman23ru/gtest-master)[m
+[32m+[m[32m[![Coverage Status](https://coveralls.io/repos/deadman23ru/gtest-master/badge.svg?branch=main)](https://coveralls.io/github/deadman23ru/gtest-master?branch=main)[m
+[32m+[m[32m[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=deadman23ru_gtest-master&metric=alert_status)](https://sonarcloud.io/dashboard?id=deadman23ru_gtest-master)[m
+[32m+[m[32m# lol[m
+[1mdiff --git a/app/app.pro b/app/app.pro[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f1731f0[m
+[1m--- /dev/null[m
+[1m+++ b/app/app.pro[m
+[36m@@ -0,0 +1,19 @@[m
+[32m+[m[32mTEMPLATE = app[m
+[32m+[m[32mCONFIG += console[m
+[32m+[m[32mCONFIG -= app_bundle[m
+[32m+[m[32mCONFIG -= qt[m
+[32m+[m
+[32m+[m[32mSOURCES += main.c \[m
+[32m+[m[32m    myfunc.c\[m
+[32m+[m[32m    func.c[m
+[32m+[m
+[32m+[m
+[32m+[m[32mHEADERS += \[m
+[32m+[m[32m    myfunc.h\[m
+[32m+[m[32m    func.h[m
+[32m+[m
+[32m+[m[32mQMAKE_CFLAGS += -Wall -Wextra -Werror[m
+[32m+[m
+[32m+[m[32m# gcov[m
+[32m+[m[32mQMAKE_CFLAGS += -fprofile-arcs -ftest-coverage[m
+[32m+[m[32mLIBS += -lgcov[m
+[1mdiff --git a/app/func.c b/app/func.c[m
+[1mnew file mode 100644[m
+[1mindex 0000000..a25f9b6[m
+[1m--- /dev/null[m
+[1m+++ b/app/func.c[m
+[36m@@ -0,0 +1,37 @@[m
+[32m+[m[32m#include <math.h>[m
+[32m+[m[32m#include "func.h"[m
+[32m+[m
+[32m+[m[32msolution Func(double a, double b, double c) {[m
+[32m+[m[32m    solution res;[m
+[32m+[m[32m    res.count = 0;[m
+[32m+[m
+[32m+[m[32m    if(a == 0){[m
+[32m+[m[32m        if(b == 0){[m
+[32m+[m[32m            res.count = 0;[m
+[32m+[m[32m            return res;[m
+[32m+[m[32m        }else{[m
+[32m+[m[32m        res.x1 = (-c)/b;[m
+[32m+[m[32m        res.count = 1;[m
+[32m+[m[32m        return res;[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    double D = pow(b, 2) - 4*a*c;[m
+[32m+[m
+[32m+[m[32m    if(D < 0.0) {[m
+[32m+[m[32m        res.count = 0;[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m[32m    if(D == 0.0) {[m
+[32m+[m[32m        res.x1 = -b/(2*a);[m
+[32m+[m[32m         res.count = 1;[m
+[32m+[m[41m        [m
+[32m+[m[32m    }[m
+[32m+[m[32m    if(D > 0.0) {[m
+[32m+[m[32m        res.x1 = (-b - sqrt(D)) / (2*a);[m
+[32m+[m[32m        res.x2 = (-b + sqrt(D)) / (2*a);[m
+[32m+[m[32m         res.count = 2;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    return res;[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/func.h b/app/func.h[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cb282aa[m
+[1m--- /dev/null[m
+[1m+++ b/app/func.h[m
+[36m@@ -0,0 +1,12 @@[m
+[32m+[m[32m#ifndef FUNC_H[m
+[32m+[m[32m#define FUNC_H[m
+[32m+[m
+[32m+[m[32mtypedef struct _solution {[m
+[32m+[m[32m    double x1;[m
+[32m+[m[32m    double x2;[m
+[32m+[m[32m    int count;[m
+[32m+[m[32m} solution;[m
+[32m+[m
+[32m+[m[32msolution Func(double a, double b, double c);[m
+[32m+[m
+[32m+[m[32m#endif[m
+[1mdiff --git a/app/main.c b/app/main.c[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5a7b42d[m
+[1m--- /dev/null[m
+[1m+++ b/app/main.c[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m#include <stdio.h>[m
+[32m+[m[32m#include "myfunc.h"[m
+[32m+[m[32m#include "func.c"[m
+[32m+[m
+[32m+[m
+[32m+[m[32mint main()[m
+[32m+[m[32m{[m
+[32m+[m[32m    printf("Hello World!\n");[m
+[32m+[m[32m    return myfunc(2);[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[1mdiff --git a/app/myfunc.c b/app/myfunc.c[m
+[1mnew file mode 100644[m
+[1mindex 0000000..910e504[m
+[1m--- /dev/null[m
+[1m+++ b/app/myfunc.c[m
+[36m@@ -0,0 +1,26 @@[m
+[32m+[m
+[32m+[m[32m#include "myfunc.h"[m
+[32m+[m
+[32m+[m[32mint myfunc(int b) {[m
+[32m+[m[32m    return b+4;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mint fibonachi(int num) {[m
+[32m+[m[32m    int prev = 1;[m
+[32m+[m[32m    int next = 1;[m
+[32m+[m
+[32m+[m[32m    if (num < 0)[m
+[32m+[m[32m        return 0;[m
+[32m+[m
+[32m+[m[32m    if (num <= 2)[m
+[32m+[m[32m        return num;[m
+[32m+[m
+[32m+[m[32m    int i = 2;[m
+[32m+[m[32m    while (i < num) {[m
+[32m+[m[32m        next += prev;[m
+[32m+[m[32m        prev = next - prev;[m
+[32m+[m[32m        i++;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    return next;[m
+[32m+[m[32m}[m
+[1mdiff --git a/app/myfunc.h b/app/myfunc.h[m
+[1mnew file mode 100644[m
+[1mindex 0000000..d14178e[m
+[1m--- /dev/null[m
+[1m+++ b/app/myfunc.h[m
+[36m@@ -0,0 +1,8 @@[m
+[32m+[m[32m#ifndef MYFUNC_H[m
+[32m+[m[32m#define MYFUNC_H[m
+[32m+[m
+[32m+[m[32mint myfunc(int b);[m
+[32m+[m
+[32m+[m[32mint fibonachi(int num);[m
+[32m+[m
+[32m+[m[32m#endif // MYFUNC_H[m
+[1mdiff --git a/error.doc.txt b/error.doc.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b5365b9[m
+[1m--- /dev/null[m
+[1m+++ b/error.doc.txt[m
+[36m@@ -0,0 +1,7 @@[m
+[32m+[m[32mошибка №1[m[41m [m
+[32m+[m[32mтест №4[m[41m [m
+[32m+[m[32mвходные данные 0 1 1[m[41m [m
+[32m+[m[32mожидаемый результат -1[m[41m [m
+[32m+[m[32mфактический результат 0[m
+[32m+[m[32mвозможная прицина ошибка во время вычислений[m[41m [m
+[32m+[m[32mстатус исправлена[m[41m [m
+[1mdiff --git a/external/googletest/.gitignore b/external/googletest/.gitignore[m
+[1mnew file mode 100644[m
+[1mindex 0000000..b294d3b[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/.gitignore[m
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32m# Ignore CI build directory[m
+[32m+[m[32mbuild/[m
+[32m+[m[32mxcuserdata[m
+[32m+[m[32mcmake-build-debug/[m
+[32m+[m[32m.idea/[m
+[32m+[m[32mbazel-bin[m
+[32m+[m[32mbazel-genfiles[m
+[32m+[m[32mbazel-googletest[m
+[32m+[m[32mbazel-out[m
+[32m+[m[32mbazel-testlogs[m
+[32m+[m[32m# python[m
+[32m+[m[32m*.pyc[m
+[32m+[m
+[32m+[m[32m# Visual Studio files[m
+[32m+[m[32m*.sdf[m
+[32m+[m[32m*.opensdf[m
+[32m+[m[32m*.VC.opendb[m
+[32m+[m[32m*.suo[m
+[32m+[m[32m*.user[m
+[32m+[m[32m_ReSharper.Caches/[m
+[32m+[m[32mWin32-Debug/[m
+[32m+[m[32mWin32-Release/[m
+[32m+[m[32mx64-Debug/[m
+[32m+[m[32mx64-Release/[m
+[32m+[m
+[32m+[m[32m# Ignore autoconf / automake files[m
+[32m+[m[32mMakefile.in[m
+[32m+[m[32maclocal.m4[m
+[32m+[m[32mconfigure[m
+[32m+[m[32mbuild-aux/[m
+[32m+[m[32mautom4te.cache/[m
+[32m+[m[32mgoogletest/m4/libtool.m4[m
+[32m+[m[32mgoogletest/m4/ltoptions.m4[m
+[32m+[m[32mgoogletest/m4/ltsugar.m4[m
+[32m+[m[32mgoogletest/m4/ltversion.m4[m
+[32m+[m[32mgoogletest/m4/lt~obsolete.m4[m
+[32m+[m
+[32m+[m[32m# Ignore generated directories.[m
+[32m+[m[32mgooglemock/fused-src/[m
+[32m+[m[32mgoogletest/fused-src/[m
+[1mdiff --git a/external/googletest/.travis.yml b/external/googletest/.travis.yml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2fbb3b1[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/.travis.yml[m
+[36m@@ -0,0 +1,81 @@[m
+[32m+[m[32m# Build matrix / environment variable are explained on:[m
+[32m+[m[32m# http://about.travis-ci.org/docs/user/build-configuration/[m
+[32m+[m[32m# This file can be validated on:[m
+[32m+[m[32m# http://lint.travis-ci.org/[m
+[32m+[m
+[32m+[m[32msudo: false[m
+[32m+[m[32mlanguage: cpp[m
+[32m+[m
+[32m+[m[32m# Define the matrix explicitly, manually expanding the combinations of (os, compiler, env).[m
+[32m+[m[32m# It is more tedious, but grants us far more flexibility.[m
+[32m+[m[32mmatrix:[m
+[32m+[m[32m  include:[m
+[32m+[m[32m    - os: linux[m
+[32m+[m[32m      compiler: gcc[m
+[32m+[m[32m      sudo : true[m
+[32m+[m[32m      install: ./ci/install-linux.sh && ./ci/log-config.sh[m
+[32m+[m[32m      script: ./ci/build-linux-bazel.sh[m
+[32m+[m[32m    - os: linux[m
+[32m+[m[32m      compiler: clang[m
+[32m+[m[32m      sudo : true[m
+[32m+[m[32m      install: ./ci/install-linux.sh && ./ci/log-config.sh[m
+[32m+[m[32m      script: ./ci/build-linux-bazel.sh[m
+[32m+[m[32m    - os: linux[m
+[32m+[m[32m      group: deprecated-2017Q4[m
+[32m+[m[32m      compiler: gcc[m
+[32m+[m[32m      install: ./ci/install-linux.sh && ./ci/log-config.sh[m
+[32m+[m[32m      script: ./ci/build-linux-autotools.sh[m
+[32m+[m[32m    - os: linux[m
+[32m+[m[32m      group: deprecated-2017Q4[m
+[32m+[m[32m      compiler: gcc[m
+[32m+[m[32m      env: BUILD_TYPE=Debug VERBOSE=1 CXX_FLAGS=-std=c++11[m
+[32m+[m[32m    - os: linux[m
+[32m+[m[32m      group: deprecated-2017Q4[m
+[32m+[m[32m      compiler: clang[m
+[32m+[m[32m      env: BUILD_TYPE=Debug VERBOSE=1[m
+[32m+[m[32m    - os: linux[m
+[32m+[m[32m      group: deprecated-2017Q4[m
+[32m+[m[32m      compiler: clang[m
+[32m+[m[32m      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11[m
+[32m+[m[32m    - os: osx[m
+[32m+[m[32m      compiler: gcc[m
+[32m+[m[32m      env: BUILD_TYPE=Debug VERBOSE=1[m
+[32m+[m[32m      if: type != pull_request[m
+[32m+[m[32m    - os: osx[m
+[32m+[m[32m      compiler: gcc[m
+[32m+[m[32m      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11[m
+[32m+[m[32m      if: type != pull_request[m
+[32m+[m[32m    - os: osx[m
+[32m+[m[32m      compiler: clang[m
+[32m+[m[32m      env: BUILD_TYPE=Debug VERBOSE=1[m
+[32m+[m[32m      if: type != pull_request[m
+[32m+[m[32m    - os: osx[m
+[32m+[m[32m      compiler: clang[m
+[32m+[m[32m      env: BUILD_TYPE=Release VERBOSE=1 CXX_FLAGS=-std=c++11[m
+[32m+[m[32m      if: type != pull_request[m
+[32m+[m
+[32m+[m[32m# These are the install and build (script) phases for the most common entries in the matrix.  They could be included[m
+[32m+[m[32m# in each entry in the matrix, but that is just repetitive.[m
+[32m+[m[32minstall:[m
+[32m+[m[32m  - ./ci/install-${TRAVIS_OS_NAME}.sh[m
+[32m+[m[32m  - . ./ci/env-${TRAVIS_OS_NAME}.sh[m
+[32m+[m[32m  - ./ci/log-config.sh[m
+[32m+[m
+[32m+[m[32mscript: ./ci/travis.sh[m
+[32m+[m
+[32m+[m[32m# For sudo=false builds this section installs the necessary dependencies.[m
+[32m+[m[32maddons:[m
+[32m+[m[32m  apt:[m
+[32m+[m[32m    # List of whitelisted in travis packages for ubuntu-precise can be found here:[m
+[32m+[m[32m    #   https://github.com/travis-ci/apt-package-whitelist/blob/master/ubuntu-precise[m
+[32m+[m[32m    # List of whitelisted in travis apt-sources:[m
+[32m+[m[32m    #   https://github.com/travis-ci/apt-source-whitelist/blob/master/ubuntu.json[m
+[32m+[m[32m    sources:[m
+[32m+[m[32m    - ubuntu-toolchain-r-test[m
+[32m+[m[32m    - llvm-toolchain-precise-3.7[m
+[32m+[m[32m    packages:[m
+[32m+[m[32m    - g++-4.9[m
+[32m+[m[32m    - clang-3.7[m
+[32m+[m
+[32m+[m[32mnotifications:[m
+[32m+[m[32m  email: false[m
+[1mdiff --git a/external/googletest/BUILD.bazel b/external/googletest/BUILD.bazel[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7d2e9d2[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/BUILD.bazel[m
+[36m@@ -0,0 +1,154 @@[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m[32m#[m
+[32m+[m[32m# Author: misterg@google.com (Gennadiy Civil)[m
+[32m+[m[32m#[m
+[32m+[m[32m#   Bazel Build for Google C++ Testing Framework(Google Test)[m
+[32m+[m
+[32m+[m[32mpackage(default_visibility = ["//visibility:public"])[m
+[32m+[m
+[32m+[m[32mlicenses(["notice"])[m
+[32m+[m
+[32m+[m[32mconfig_setting([m
+[32m+[m[32m    name = "windows",[m
+[32m+[m[32m    values = { "cpu": "x64_windows" },[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32mconfig_setting([m
+[32m+[m[32m    name = "windows_msvc",[m
+[32m+[m[32m    values = {"cpu": "x64_windows_msvc"},[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32m# Google Test including Google Mock[m
+[32m+[m[32mcc_library([m
+[32m+[m[32m    name = "gtest",[m
+[32m+[m[32m    srcs = glob([m
+[32m+[m[32m        include = [[m
+[32m+[m[32m            "googletest/src/*.cc",[m
+[32m+[m[32m            "googletest/src/*.h",[m
+[32m+[m[32m            "googletest/include/gtest/**/*.h",[m
+[32m+[m[32m            "googlemock/src/*.cc",[m
+[32m+[m[32m            "googlemock/include/gmock/**/*.h",[m
+[32m+[m[32m        ],[m
+[32m+[m[32m        exclude = [[m
+[32m+[m[32m            "googletest/src/gtest-all.cc",[m
+[32m+[m[32m            "googletest/src/gtest_main.cc",[m
+[32m+[m[32m            "googlemock/src/gmock-all.cc",[m
+[32m+[m[32m            "googlemock/src/gmock_main.cc",[m
+[32m+[m[32m        ],[m
+[32m+[m[32m    ),[m
+[32m+[m[32m    hdrs =glob([[m
+[32m+[m[32m        "googletest/include/gtest/*.h",[m
+[32m+[m[32m        "googlemock/include/gmock/*.h",[m
+[32m+[m[32m    ]),[m
+[32m+[m[32m    copts = select([m
+[32m+[m[32m        {[m
+[32m+[m[32m            ":windows": [],[m
+[32m+[m[32m            ":windows_msvc": [],[m
+[32m+[m[32m            "//conditions:default": ["-pthread"],[m
+[32m+[m[32m        },[m
+[32m+[m[32m    ),[m
+[32m+[m[32m    includes = [[m
+[32m+[m[32m        "googlemock",[m
+[32m+[m[32m        "googlemock/include",[m
+[32m+[m[32m        "googletest",[m
+[32m+[m[32m        "googletest/include",[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    linkopts = select({[m
+[32m+[m[32m        ":windows": [],[m
+[32m+[m[32m        ":windows_msvc": [],[m
+[32m+[m[32m        "//conditions:default": [[m
+[32m+[m[32m            "-pthread",[m
+[32m+[m[32m        ],[m
+[32m+[m[32m    }),[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32mcc_library([m
+[32m+[m[32m    name = "gtest_main",[m
+[32m+[m[32m    srcs = [[m
+[32m+[m[32m        "googlemock/src/gmock_main.cc",[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    deps = [":gtest"],[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32m# The following rules build samples of how to use gTest.[m
+[32m+[m[32mcc_library([m
+[32m+[m[32m    name = "gtest_sample_lib",[m
+[32m+[m[32m    srcs = [[m
+[32m+[m[32m        "googletest/samples/sample1.cc",[m
+[32m+[m[32m        "googletest/samples/sample2.cc",[m
+[32m+[m[32m        "googletest/samples/sample4.cc",[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    hdrs = [[m
+[32m+[m[32m        "googletest/samples/prime_tables.h",[m
+[32m+[m[32m        "googletest/samples/sample1.h",[m
+[32m+[m[32m        "googletest/samples/sample2.h",[m
+[32m+[m[32m        "googletest/samples/sample3-inl.h",[m
+[32m+[m[32m        "googletest/samples/sample4.h",[m
+[32m+[m[32m    ],[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32mcc_test([m
+[32m+[m[32m    name = "gtest_samples",[m
+[32m+[m[32m    size = "small",[m
+[32m+[m[32m    #All Samples except:[m
+[32m+[m[32m    #sample9 ( main )[m
+[32m+[m[32m    #sample10 (main and takes a command line option and needs to be separate)[m
+[32m+[m[32m    srcs = [[m
+[32m+[m[32m        "googletest/samples/sample1_unittest.cc",[m
+[32m+[m[32m        "googletest/samples/sample2_unittest.cc",[m
+[32m+[m[32m        "googletest/samples/sample3_unittest.cc",[m
+[32m+[m[32m        "googletest/samples/sample4_unittest.cc",[m
+[32m+[m[32m        "googletest/samples/sample5_unittest.cc",[m
+[32m+[m[32m        "googletest/samples/sample6_unittest.cc",[m
+[32m+[m[32m        "googletest/samples/sample7_unittest.cc",[m
+[32m+[m[32m        "googletest/samples/sample8_unittest.cc",[m
+[32m+[m[32m    ],[m
+[32m+[m[32m    deps = [[m
+[32m+[m[32m        "gtest_sample_lib",[m
+[32m+[m[32m        ":gtest_main",[m
+[32m+[m[32m    ],[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32mcc_test([m
+[32m+[m[32m    name = "sample9_unittest",[m
+[32m+[m[32m    size = "small",[m
+[32m+[m[32m    srcs = ["googletest/samples/sample9_unittest.cc"],[m
+[32m+[m[32m    deps = [":gtest"],[m
+[32m+[m[32m)[m
+[32m+[m
+[32m+[m[32mcc_test([m
+[32m+[m[32m    name = "sample10_unittest",[m
+[32m+[m[32m    size = "small",[m
+[32m+[m[32m    srcs = ["googletest/samples/sample10_unittest.cc"],[m
+[32m+[m[32m    deps = [[m
+[32m+[m[32m        ":gtest",[m
+[32m+[m[32m    ],[m
+[32m+[m[32m)[m
+[1mdiff --git a/external/googletest/CMakeLists.txt b/external/googletest/CMakeLists.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f8a97fa[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/CMakeLists.txt[m
+[36m@@ -0,0 +1,33 @@[m
+[32m+[m[32mcmake_minimum_required(VERSION 2.6.4)[m
+[32m+[m
+[32m+[m[32mif (POLICY CMP0048)[m
+[32m+[m[32m  cmake_policy(SET CMP0048 NEW)[m
+[32m+[m[32mendif (POLICY CMP0048)[m
+[32m+[m
+[32m+[m[32mproject( googletest-distribution )[m
+[32m+[m
+[32m+[m[32menable_testing()[m
+[32m+[m
+[32m+[m[32minclude(CMakeDependentOption)[m
+[32m+[m[32mif (CMAKE_VERSION VERSION_LESS 2.8.5)[m
+[32m+[m[32m  set(CMAKE_INSTALL_BINDIR "bin" CACHE STRING "User executables (bin)")[m
+[32m+[m[32m  set(CMAKE_INSTALL_LIBDIR "lib${LIB_SUFFIX}" CACHE STRING "Object code libraries (lib)")[m
+[32m+[m[32m  set(CMAKE_INSTALL_INCLUDEDIR "include" CACHE STRING "C header files (include)")[m
+[32m+[m[32m  mark_as_advanced(CMAKE_INSTALL_BINDIR CMAKE_INSTALL_LIBDIR CMAKE_INSTALL_INCLUDEDIR)[m
+[32m+[m[32melse()[m
+[32m+[m[32m  include(GNUInstallDirs)[m
+[32m+[m[32mendif()[m
+[32m+[m
+[32m+[m[32moption(BUILD_GTEST "Builds the googletest subproject" OFF)[m
+[32m+[m
+[32m+[m[32m#Note that googlemock target already builds googletest[m
+[32m+[m[32moption(BUILD_GMOCK "Builds the googlemock subproject" ON)[m
+[32m+[m
+[32m+[m[32mcmake_dependent_option(INSTALL_GTEST "Enable installation of googletest. (Projects embedding googletest may want to turn this OFF.)" ON "BUILD_GTEST OR BUILD_GMOCK" OFF)[m
+[32m+[m[32mcmake_dependent_option(INSTALL_GMOCK "Enable installation of googlemock. (Projects embedding googlemock may want to turn this OFF.)" ON "BUILD_GMOCK" OFF)[m
+[32m+[m
+[32m+[m[32mif(BUILD_GMOCK)[m
+[32m+[m[32m  add_subdirectory( googlemock )[m
+[32m+[m[32melseif(BUILD_GTEST)[m
+[32m+[m[32m  add_subdirectory( googletest )[m
+[32m+[m[32mendif()[m
+[1mdiff --git a/external/googletest/CONTRIBUTING.md b/external/googletest/CONTRIBUTING.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..0ebdfcc[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/CONTRIBUTING.md[m
+[36m@@ -0,0 +1,160 @@[m
+[32m+[m[32m# How to become a contributor and submit your own code[m
+[32m+[m
+[32m+[m[32m## Contributor License Agreements[m
+[32m+[m
+[32m+[m[32mWe'd love to accept your patches! Before we can take them, we[m
+[32m+[m[32mhave to jump a couple of legal hurdles.[m
+[32m+[m
+[32m+[m[32mPlease fill out either the individual or corporate Contributor License Agreement[m
+[32m+[m[32m(CLA).[m
+[32m+[m
+[32m+[m[32m  * If you are an individual writing original source code and you're sure you[m
+[32m+[m[32m    own the intellectual property, then you'll need to sign an[m
+[32m+[m[32m    [individual CLA](https://developers.google.com/open-source/cla/individual).[m
+[32m+[m[32m  * If you work for a company that wants to allow you to contribute your work,[m
+[32m+[m[32m    then you'll need to sign a[m
+[32m+[m[32m    [corporate CLA](https://developers.google.com/open-source/cla/corporate).[m
+[32m+[m
+[32m+[m[32mFollow either of the two links above to access the appropriate CLA and[m
+[32m+[m[32minstructions for how to sign and return it. Once we receive it, we'll be able to[m
+[32m+[m[32maccept your pull requests.[m
+[32m+[m
+[32m+[m[32m## Contributing A Patch[m
+[32m+[m
+[32m+[m[32m1. Submit an issue describing your proposed change to the[m
+[32m+[m[32m   [issue tracker](https://github.com/google/googletest).[m
+[32m+[m[32m1. Please don't mix more than one logical change per submittal,[m
+[32m+[m[32m   because it makes the history hard to follow. If you want to make a[m
+[32m+[m[32m   change that doesn't have a corresponding issue in the issue[m
+[32m+[m[32m   tracker, please create one.[m
+[32m+[m[32m1. Also, coordinate with team members that are listed on the issue in[m
+[32m+[m[32m   question. This ensures that work isn't being duplicated and[m
+[32m+[m[32m   communicating your plan early also generally leads to better[m
+[32m+[m[32m   patches.[m
+[32m+[m[32m1. If your proposed change is accepted, and you haven't already done so, sign a[m
+[32m+[m[32m   Contributor License Agreement (see details above).[m
+[32m+[m[32m1. Fork the desired repo, develop and test your code changes.[m
+[32m+[m[32m1. Ensure that your code adheres to the existing style in the sample to which[m
+[32m+[m[32m   you are contributing.[m
+[32m+[m[32m1. Ensure that your code has an appropriate set of unit tests which all pass.[m
+[32m+[m[32m1. Submit a pull request.[m
+[32m+[m
+[32m+[m[32mIf you are a Googler, it is preferable to first create an internal change and[m
+[32m+[m[32mhave it reviewed and submitted, and then create an upstreaming pull[m
+[32m+[m[32mrequest here.[m[41m [m
+[32m+[m
+[32m+[m[32m## The Google Test and Google Mock Communities ##[m
+[32m+[m
+[32m+[m[32mThe Google Test community exists primarily through the[m
+[32m+[m[32m[discussion group](http://groups.google.com/group/googletestframework)[m
+[32m+[m[32mand the GitHub repository.[m
+[32m+[m[32mLikewise, the Google Mock community exists primarily through their own[m
+[32m+[m[32m[discussion group](http://groups.google.com/group/googlemock).[m
+[32m+[m[32mYou are definitely encouraged to contribute to the[m
+[32m+[m[32mdiscussion and you can also help us to keep the effectiveness of the[m
+[32m+[m[32mgroup high by following and promoting the guidelines listed here.[m
+[32m+[m
+[32m+[m[32m### Please Be Friendly ###[m
+[32m+[m
+[32m+[m[32mShowing courtesy and respect to others is a vital part of the Google[m
+[32m+[m[32mculture, and we strongly encourage everyone participating in Google[m
+[32m+[m[32mTest development to join us in accepting nothing less. Of course,[m
+[32m+[m[32mbeing courteous is not the same as failing to constructively disagree[m
+[32m+[m[32mwith each other, but it does mean that we should be respectful of each[m
+[32m+[m[32mother when enumerating the 42 technical reasons that a particular[m
+[32m+[m[32mproposal may not be the best choice. There's never a reason to be[m
+[32m+[m[32mantagonistic or dismissive toward anyone who is sincerely trying to[m
+[32m+[m[32mcontribute to a discussion.[m
+[32m+[m
+[32m+[m[32mSure, C++ testing is serious business and all that, but it's also[m
+[32m+[m[32ma lot of fun. Let's keep it that way. Let's strive to be one of the[m
+[32m+[m[32mfriendliest communities in all of open source.[m
+[32m+[m
+[32m+[m[32mAs always, discuss Google Test in the official GoogleTest discussion group.[m
+[32m+[m[32mYou don't have to actually submit code in order to sign up. Your participation[m
+[32m+[m[32mitself is a valuable contribution.[m
+[32m+[m
+[32m+[m[32m## Style[m
+[32m+[m
+[32m+[m[32mTo keep the source consistent, readable, diffable and easy to merge,[m
+[32m+[m[32mwe use a fairly rigid coding style, as defined by the [google-styleguide](https://github.com/google/styleguide) project.  All patches will be expected[m
+[32m+[m[32mto conform to the style outlined [here](https://google.github.io/styleguide/cppguide.html).[m
+[32m+[m
+[32m+[m[32m## Requirements for Contributors ###[m
+[32m+[m
+[32m+[m[32mIf you plan to contribute a patch, you need to build Google Test,[m
+[32m+[m[32mGoogle Mock, and their own tests from a git checkout, which has[m
+[32m+[m[32mfurther requirements:[m
+[32m+[m
+[32m+[m[32m  * [Python](https://www.python.org/) v2.3 or newer (for running some of[m
+[32m+[m[32m    the tests and re-generating certain source files from templates)[m
+[32m+[m[32m  * [CMake](https://cmake.org/) v2.6.4 or newer[m
+[32m+[m[32m  * [GNU Build System](https://en.wikipedia.org/wiki/GNU_Build_System)[m
+[32m+[m[32m    including automake (>= 1.9), autoconf (>= 2.59), and[m
+[32m+[m[32m    libtool / libtoolize.[m
+[32m+[m
+[32m+[m[32m## Developing Google Test ##[m
+[32m+[m
+[32m+[m[32mThis section discusses how to make your own changes to Google Test.[m
+[32m+[m
+[32m+[m[32m### Testing Google Test Itself ###[m
+[32m+[m
+[32m+[m[32mTo make sure your changes work as intended and don't break existing[m
+[32m+[m[32mfunctionality, you'll want to compile and run Google Test's own tests.[m
+[32m+[m[32mFor that you can use CMake:[m
+[32m+[m
+[32m+[m[32m    mkdir mybuild[m
+[32m+[m[32m    cd mybuild[m
+[32m+[m[32m    cmake -Dgtest_build_tests=ON ${GTEST_DIR}[m
+[32m+[m
+[32m+[m[32mMake sure you have Python installed, as some of Google Test's tests[m
+[32m+[m[32mare written in Python.  If the cmake command complains about not being[m
+[32m+[m[32mable to find Python (`Could NOT find PythonInterp (missing:[m
+[32m+[m[32mPYTHON_EXECUTABLE)`), try telling it explicitly where your Python[m
+[32m+[m[32mexecutable can be found:[m
+[32m+[m
+[32m+[m[32m    cmake -DPYTHON_EXECUTABLE=path/to/python -Dgtest_build_tests=ON ${GTEST_DIR}[m
+[32m+[m
+[32m+[m[32mNext, you can build Google Test and all of its own tests.  On \*nix,[m
+[32m+[m[32mthis is usually done by 'make'.  To run the tests, do[m
+[32m+[m
+[32m+[m[32m    make test[m
+[32m+[m
+[32m+[m[32mAll tests should pass.[m
+[32m+[m
+[32m+[m[32m### Regenerating Source Files ##[m
+[32m+[m
+[32m+[m[32mSome of Google Test's source files are generated from templates (not[m
+[32m+[m[32min the C++ sense) using a script.[m
+[32m+[m[32mFor example, the[m
+[32m+[m[32mfile include/gtest/internal/gtest-type-util.h.pump is used to generate[m
+[32m+[m[32mgtest-type-util.h in the same directory.[m
+[32m+[m
+[32m+[m[32mYou don't need to worry about regenerating the source files[m
+[32m+[m[32munless you need to modify them.  You would then modify the[m
+[32m+[m[32mcorresponding `.pump` files and run the '[pump.py](googletest/scripts/pump.py)'[m
+[32m+[m[32mgenerator script.  See the [Pump Manual](googletest/docs/PumpManual.md).[m
+[32m+[m
+[32m+[m[32m## Developing Google Mock ###[m
+[32m+[m
+[32m+[m[32mThis section discusses how to make your own changes to Google Mock.[m
+[32m+[m
+[32m+[m[32m#### Testing Google Mock Itself ####[m
+[32m+[m
+[32m+[m[32mTo make sure your changes work as intended and don't break existing[m
+[32m+[m[32mfunctionality, you'll want to compile and run Google Test's own tests.[m
+[32m+[m[32mFor that you'll need Autotools.  First, make sure you have followed[m
+[32m+[m[32mthe instructions above to configure Google Mock.[m
+[32m+[m[32mThen, create a build output directory and enter it.  Next,[m
+[32m+[m
+[32m+[m[32m    ${GMOCK_DIR}/configure  # try --help for more info[m
+[32m+[m
+[32m+[m[32mOnce you have successfully configured Google Mock, the build steps are[m
+[32m+[m[32mstandard for GNU-style OSS packages.[m
+[32m+[m
+[32m+[m[32m    make        # Standard makefile following GNU conventions[m
+[32m+[m[32m    make check  # Builds and runs all tests - all should pass.[m
+[32m+[m
+[32m+[m[32mNote that when building your project against Google Mock, you are building[m
+[32m+[m[32magainst Google Test as well.  There is no need to configure Google Test[m
+[32m+[m[32mseparately.[m
+[1mdiff --git a/external/googletest/LICENSE b/external/googletest/LICENSE[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1941a11[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/LICENSE[m
+[36m@@ -0,0 +1,28 @@[m
+[32m+[m[32mCopyright 2008, Google Inc.[m
+[32m+[m[32mAll rights reserved.[m
+[32m+[m
+[32m+[m[32mRedistribution and use in source and binary forms, with or without[m
+[32m+[m[32mmodification, are permitted provided that the following conditions are[m
+[32m+[m[32mmet:[m
+[32m+[m
+[32m+[m[32m    * Redistributions of source code must retain the above copyright[m
+[32m+[m[32mnotice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m    * Redistributions in binary form must reproduce the above[m
+[32m+[m[32mcopyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32min the documentation and/or other materials provided with the[m
+[32m+[m[32mdistribution.[m
+[32m+[m[32m    * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32mcontributors may be used to endorse or promote products derived from[m
+[32m+[m[32mthis software without specific prior written permission.[m
+[32m+[m
+[32m+[m[32mTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32mLIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32mA PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32mOWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32mSPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32mLIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32mDATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32mTHEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32mOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[1mdiff --git a/external/googletest/Makefile.am b/external/googletest/Makefile.am[m
+[1mnew file mode 100644[m
+[1mindex 0000000..433eefe[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/Makefile.am[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m## Process this file with automake to produce Makefile.in[m
+[32m+[m[32mACLOCAL_AMFLAGS = -I m4[m
+[32m+[m
+[32m+[m[32mAUTOMAKE_OPTIONS = foreign[m
+[32m+[m
+[32m+[m[32m# Build . before src so that our all-local and clean-local hooks kicks in at[m
+[32m+[m[32m# the right time.[m
+[32m+[m[32mSUBDIRS = googletest googlemock[m
+[32m+[m
+[32m+[m[32mEXTRA_DIST = \[m
+[32m+[m[32m  BUILD.bazel \[m
+[32m+[m[32m  CMakeLists.txt \[m
+[32m+[m[32m  README.md \[m
+[32m+[m[32m  WORKSPACE[m
+[1mdiff --git a/external/googletest/README.md b/external/googletest/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..7936300[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/README.md[m
+[36m@@ -0,0 +1,122 @@[m
+[32m+[m
+[32m+[m[32m# Google Test #[m
+[32m+[m
+[32m+[m[32m[![Build Status](https://travis-ci.org/google/googletest.svg?branch=master)](https://travis-ci.org/google/googletest)[m
+[32m+[m[32m[![Build status](https://ci.appveyor.com/api/projects/status/4o38plt0xbo1ubc8/branch/master?svg=true)](https://ci.appveyor.com/project/GoogleTestAppVeyor/googletest/branch/master)[m
+[32m+[m
+[32m+[m[32mWelcome to **Google Test**, Google's C++ test framework![m
+[32m+[m
+[32m+[m[32mThis repository is a merger of the formerly separate GoogleTest and[m
+[32m+[m[32mGoogleMock projects. These were so closely related that it makes sense to[m
+[32m+[m[32mmaintain and release them together.[m
+[32m+[m
+[32m+[m[32mPlease see the project page above for more information as well as the[m
+[32m+[m[32mmailing list for questions, discussions, and development.  There is[m
+[32m+[m[32malso an IRC channel on [OFTC](https://webchat.oftc.net/) (irc.oftc.net) #gtest available.  Please[m
+[32m+[m[32mjoin us![m
+[32m+[m
+[32m+[m[32mGetting started information for **Google Test** is available in the[m[41m [m
+[32m+[m[32m[Google Test Primer](googletest/docs/Primer.md) documentation.[m
+[32m+[m
+[32m+[m[32m**Google Mock** is an extension to Google Test for writing and using C++ mock[m
+[32m+[m[32mclasses.  See the separate [Google Mock documentation](googlemock/README.md).[m
+[32m+[m
+[32m+[m[32mMore detailed documentation for googletest (including build instructions) are[m
+[32m+[m[32min its interior [googletest/README.md](googletest/README.md) file.[m
+[32m+[m
+[32m+[m[32m## Features ##[m
+[32m+[m
+[32m+[m[32m  * An [xUnit](https://en.wikipedia.org/wiki/XUnit) test framework.[m
+[32m+[m[32m  * Test discovery.[m
+[32m+[m[32m  * A rich set of assertions.[m
+[32m+[m[32m  * User-defined assertions.[m
+[32m+[m[32m  * Death tests.[m
+[32m+[m[32m  * Fatal and non-fatal failures.[m
+[32m+[m[32m  * Value-parameterized tests.[m
+[32m+[m[32m  * Type-parameterized tests.[m
+[32m+[m[32m  * Various options for running the tests.[m
+[32m+[m[32m  * XML test report generation.[m
+[32m+[m
+[32m+[m[32m## Platforms ##[m
+[32m+[m
+[32m+[m[32mGoogle test has been used on a variety of platforms:[m
+[32m+[m
+[32m+[m[32m  * Linux[m
+[32m+[m[32m  * Mac OS X[m
+[32m+[m[32m  * Windows[m
+[32m+[m[32m  * Cygwin[m
+[32m+[m[32m  * MinGW[m
+[32m+[m[32m  * Windows Mobile[m
+[32m+[m[32m  * Symbian[m
+[32m+[m
+[32m+[m[32m## Who Is Using Google Test? ##[m
+[32m+[m
+[32m+[m[32mIn addition to many internal projects at Google, Google Test is also used by[m
+[32m+[m[32mthe following notable projects:[m
+[32m+[m
+[32m+[m[32m  * The [Chromium projects](http://www.chromium.org/) (behind the Chrome[m
+[32m+[m[32m    browser and Chrome OS).[m
+[32m+[m[32m  * The [LLVM](http://llvm.org/) compiler.[m
+[32m+[m[32m  * [Protocol Buffers](https://github.com/google/protobuf), Google's data[m
+[32m+[m[32m    interchange format.[m
+[32m+[m[32m  * The [OpenCV](http://opencv.org/) computer vision library.[m
+[32m+[m[32m  * [tiny-dnn](https://github.com/tiny-dnn/tiny-dnn): header only, dependency-free deep learning framework in C++11.[m
+[32m+[m
+[32m+[m[32m## Related Open Source Projects ##[m
+[32m+[m
+[32m+[m[32m[GTest Runner](https://github.com/nholthaus/gtest-runner) is a Qt5 based automated test-runner and Graphical User Interface with powerful features for Windows and Linux platforms.[m
+[32m+[m
+[32m+[m[32m[Google Test UI](https://github.com/ospector/gtest-gbar) is test runner that runs[m
+[32m+[m[32myour test binary, allows you to track its progress via a progress bar, and[m
+[32m+[m[32mdisplays a list of test failures. Clicking on one shows failure text. Google[m
+[32m+[m[32mTest UI is written in C#.[m
+[32m+[m
+[32m+[m[32m[GTest TAP Listener](https://github.com/kinow/gtest-tap-listener) is an event[m
+[32m+[m[32mlistener for Google Test that implements the[m
+[32m+[m[32m[TAP protocol](https://en.wikipedia.org/wiki/Test_Anything_Protocol) for test[m
+[32m+[m[32mresult output. If your test runner understands TAP, you may find it useful.[m
+[32m+[m
+[32m+[m[32m[gtest-parallel](https://github.com/google/gtest-parallel) is a test runner that[m
+[32m+[m[32mruns tests from your binary in parallel to provide significant speed-up.[m
+[32m+[m
+[32m+[m[32m## Requirements ##[m
+[32m+[m
+[32m+[m[32mGoogle Test is designed to have fairly minimal requirements to build[m
+[32m+[m[32mand use with your projects, but there are some.  Currently, we support[m
+[32m+[m[32mLinux, Windows, Mac OS X, and Cygwin.  We will also make our best[m
+[32m+[m[32meffort to support other platforms (e.g. Solaris, AIX, and z/OS).[m
+[32m+[m[32mHowever, since core members of the Google Test project have no access[m
+[32m+[m[32mto these platforms, Google Test may have outstanding issues there.  If[m
+[32m+[m[32myou notice any problems on your platform, please notify[m
+[32m+[m[32m[googletestframework@googlegroups.com](https://groups.google.com/forum/#!forum/googletestframework). Patches for fixing them are[m
+[32m+[m[32meven more welcome![m
+[32m+[m
+[32m+[m[32m### Linux Requirements ###[m
+[32m+[m
+[32m+[m[32mThese are the base requirements to build and use Google Test from a source[m
+[32m+[m[32mpackage (as described below):[m
+[32m+[m
+[32m+[m[32m  * GNU-compatible Make or gmake[m
+[32m+[m[32m  * POSIX-standard shell[m
+[32m+[m[32m  * POSIX(-2) Regular Expressions (regex.h)[m
+[32m+[m[32m  * A C++98-standard-compliant compiler[m
+[32m+[m
+[32m+[m[32m### Windows Requirements ###[m
+[32m+[m
+[32m+[m[32m  * Microsoft Visual C++ 2010 or newer[m
+[32m+[m
+[32m+[m[32m### Cygwin Requirements ###[m
+[32m+[m
+[32m+[m[32m  * Cygwin v1.5.25-14 or newer[m
+[32m+[m
+[32m+[m[32m### Mac OS X Requirements ###[m
+[32m+[m
+[32m+[m[32m  * Mac OS X v10.4 Tiger or newer[m
+[32m+[m[32m  * Xcode Developer Tools[m
+[32m+[m
+[32m+[m[32m## Contributing change[m
+[32m+[m
+[32m+[m[32mPlease read the [`CONTRIBUTING.md`](CONTRIBUTING.md) for details on[m
+[32m+[m[32mhow to contribute to this project.[m
+[32m+[m
+[32m+[m[32mHappy testing![m
+[1mdiff --git a/external/googletest/WORKSPACE b/external/googletest/WORKSPACE[m
+[1mnew file mode 100644[m
+[1mindex 0000000..106b824[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/WORKSPACE[m
+[36m@@ -0,0 +1 @@[m
+[32m+[m[32mworkspace(name = "com_google_googletest")[m
+[1mdiff --git a/external/googletest/appveyor.yml b/external/googletest/appveyor.yml[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f73f413[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/appveyor.yml[m
+[36m@@ -0,0 +1,112 @@[m
+[32m+[m[32mversion: '{build}'[m
+[32m+[m
+[32m+[m[32mos: Visual Studio 2015[m
+[32m+[m
+[32m+[m[32menvironment:[m
+[32m+[m[32m  matrix:[m
+[32m+[m[32m    - compiler: msvc-15-seh[m
+[32m+[m[32m      generator: "Visual Studio 15 2017"[m
+[32m+[m[32m      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017[m
+[32m+[m
+[32m+[m[32m    - compiler: msvc-15-seh[m
+[32m+[m[32m      generator: "Visual Studio 15 2017 Win64"[m
+[32m+[m[32m      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017[m
+[32m+[m[32m      enabled_on_pr: yes[m
+[32m+[m
+[32m+[m[32m    - compiler: msvc-14-seh[m
+[32m+[m[32m      generator: "Visual Studio 14 2015"[m
+[32m+[m
+[32m+[m[32m    - compiler: msvc-14-seh[m
+[32m+[m[32m      generator: "Visual Studio 14 2015 Win64"[m
+[32m+[m
+[32m+[m[32m    - compiler: msvc-12-seh[m
+[32m+[m[32m      generator: "Visual Studio 12 2013"[m
+[32m+[m
+[32m+[m[32m    - compiler: msvc-12-seh[m
+[32m+[m[32m      generator: "Visual Studio 12 2013 Win64"[m
+[32m+[m
+[32m+[m[32m    - compiler: msvc-11-seh[m
+[32m+[m[32m      generator: "Visual Studio 11 2012"[m
+[32m+[m
+[32m+[m[32m    - compiler: msvc-11-seh[m
+[32m+[m[32m      generator: "Visual Studio 11 2012 Win64"[m
+[32m+[m
+[32m+[m[32m    - compiler: msvc-10-seh[m
+[32m+[m[32m      generator: "Visual Studio 10 2010"[m
+[32m+[m
+[32m+[m[32m    - compiler: gcc-5.3.0-posix[m
+[32m+[m[32m      generator: "MinGW Makefiles"[m
+[32m+[m[32m      cxx_path: 'C:\mingw-w64\i686-5.3.0-posix-dwarf-rt_v4-rev0\mingw32\bin'[m
+[32m+[m
+[32m+[m[32m    - compiler: gcc-6.3.0-posix[m
+[32m+[m[32m      generator: "MinGW Makefiles"[m
+[32m+[m[32m      cxx_path: 'C:\mingw-w64\i686-6.3.0-posix-dwarf-rt_v5-rev1\mingw32\bin'[m
+[32m+[m
+[32m+[m[32mconfiguration:[m
+[32m+[m[32m  - Debug[m
+[32m+[m
+[32m+[m[32mbuild:[m
+[32m+[m[32m  verbosity: minimal[m
+[32m+[m
+[32m+[m[32minstall:[m
+[32m+[m[32m- ps: |[m
+[32m+[m[32m    Write-Output "Compiler: $env:compiler"[m
+[32m+[m[32m    Write-Output "Generator: $env:generator"[m
+[32m+[m[32m    if (-not (Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER)) {[m
+[32m+[m[32m      Write-Output "This is *NOT* a pull request build"[m
+[32m+[m[32m    } else {[m
+[32m+[m[32m      Write-Output "This is a pull request build"[m
+[32m+[m[32m      if (-not (Test-Path env:enabled_on_pr) -or $env:enabled_on_pr -ne "yes") {[m
+[32m+[m[32m        Write-Output "PR builds are *NOT* explicitly enabled"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    # git bash conflicts with MinGW makefiles[m
+[32m+[m[32m    if ($env:generator -eq "MinGW Makefiles") {[m
+[32m+[m[32m        $env:path = $env:path.replace("C:\Program Files\Git\usr\bin;", "")[m
+[32m+[m[32m        if ($env:cxx_path -ne "") {[m
+[32m+[m[32m            $env:path += ";$env:cxx_path"[m
+[32m+[m[32m        }[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32mbuild_script:[m
+[32m+[m[32m- ps: |[m
+[32m+[m[32m    # Only enable some builds for pull requests, the AppVeyor queue is too long.[m
+[32m+[m[32m    if ((Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER) -And (-not (Test-Path env:enabled_on_pr) -or $env:enabled_on_pr -ne "yes")) {[m
+[32m+[m[32m      return[m
+[32m+[m[32m    }[m
+[32m+[m[32m    md _build -Force | Out-Null[m
+[32m+[m[32m    cd _build[m
+[32m+[m
+[32m+[m[32m    $conf = if ($env:generator -eq "MinGW Makefiles") {"-DCMAKE_BUILD_TYPE=$env:configuration"} else {"-DCMAKE_CONFIGURATION_TYPES=Debug;Release"}[m
+[32m+[m[32m    # Disable test for MinGW (gtest tests fail, gmock tests can not build)[m
+[32m+[m[32m    $gtest_build_tests = if ($env:generator -eq "MinGW Makefiles") {"-Dgtest_build_tests=OFF"} else {"-Dgtest_build_tests=ON"}[m
+[32m+[m[32m    $gmock_build_tests = if ($env:generator -eq "MinGW Makefiles") {"-Dgmock_build_tests=OFF"} else {"-Dgmock_build_tests=ON"}[m
+[32m+[m[32m    & cmake -G "$env:generator" $conf -Dgtest_build_samples=ON $gtest_build_tests $gmock_build_tests ..[m
+[32m+[m[32m    if ($LastExitCode -ne 0) {[m
+[32m+[m[32m        throw "Exec: $ErrorMessage"[m
+[32m+[m[32m    }[m
+[32m+[m[32m    & cmake --build . --config $env:configuration[m
+[32m+[m[32m    if ($LastExitCode -ne 0) {[m
+[32m+[m[32m        throw "Exec: $ErrorMessage"[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32mtest_script:[m
+[32m+[m[32m- ps: |[m
+[32m+[m[32m    # Only enable some builds for pull requests, the AppVeyor queue is too long.[m
+[32m+[m[32m    if ((Test-Path env:APPVEYOR_PULL_REQUEST_NUMBER) -And (-not (Test-Path env:enabled_on_pr) -or $env:enabled_on_pr -ne "yes")) {[m
+[32m+[m[32m      return[m
+[32m+[m[32m    }[m
+[32m+[m[32m    if ($env:generator -eq "MinGW Makefiles") {[m
+[32m+[m[32m        return # No test available for MinGW[m
+[32m+[m[32m    }[m
+[32m+[m[32m    & ctest -C $env:configuration --timeout 300 --output-on-failure[m
+[32m+[m[32m    if ($LastExitCode -ne 0) {[m
+[32m+[m[32m        throw "Exec: $ErrorMessage"[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32martifacts:[m
+[32m+[m[32m  - path: '_build/CMakeFiles/*.log'[m
+[32m+[m[32m    name: logs[m
+[32m+[m[32m  - path: '_build/Testing/**/*.xml'[m
+[32m+[m[32m    name: test_results[m
+[1mdiff --git a/external/googletest/ci/build-linux-autotools.sh b/external/googletest/ci/build-linux-autotools.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..cc404e9[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/build-linux-autotools.sh[m
+[36m@@ -0,0 +1,44 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[32m+[m[32mset -e[m
+[32m+[m
+[32m+[m[32m. ci/get-nprocessors.sh[m
+[32m+[m
+[32m+[m[32m# Create the configuration script[m
+[32m+[m[32mautoreconf -i[m
+[32m+[m
+[32m+[m[32m# Run in a subdirectory to keep the sources clean[m
+[32m+[m[32mmkdir build || true[m
+[32m+[m[32mcd build[m
+[32m+[m[32m../configure[m
+[32m+[m
+[32m+[m[32mmake -j ${NPROCESSORS:-2}[m
+[1mdiff --git a/external/googletest/ci/build-linux-bazel.sh b/external/googletest/ci/build-linux-bazel.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2f63896[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/build-linux-bazel.sh[m
+[36m@@ -0,0 +1,35 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[32m+[m[32mset -e[m
+[32m+[m
+[32m+[m[32mbazel build --curses=no //...:all[m
+[32m+[m[32mbazel test --curses=no //...:all[m
+[1mdiff --git a/external/googletest/ci/env-linux.sh b/external/googletest/ci/env-linux.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..9086b1f[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/env-linux.sh[m
+[36m@@ -0,0 +1,41 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# This file should be sourced, and not executed as a standalone script.[m
+[32m+[m[32m#[m
+[32m+[m
+[32m+[m[32m# TODO() - we can check if this is being sourced using $BASH_VERSION and $BASH_SOURCE[0] != ${0}.[m
+[32m+[m
+[32m+[m[32mif [ "${TRAVIS_OS_NAME}" = "linux" ]; then[m
+[32m+[m[32m    if [ "$CXX" = "g++" ]; then export CXX="g++-4.9" CC="gcc-4.9"; fi[m
+[32m+[m[32m    if [ "$CXX" = "clang++" ]; then export CXX="clang++-3.7" CC="clang-3.7"; fi[m
+[32m+[m[32mfi[m
+[1mdiff --git a/external/googletest/ci/env-osx.sh b/external/googletest/ci/env-osx.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..31c8835[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/env-osx.sh[m
+[36m@@ -0,0 +1,40 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[32m+[m[32m#[m
+[32m+[m[32m# This file should be sourced, and not executed as a standalone script.[m
+[32m+[m[32m#[m
+[32m+[m
+[32m+[m[32m# TODO() - we can check if this is being sourced using $BASH_VERSION and $BASH_SOURCE[0] != ${0}.[m
+[32m+[m
+[32m+[m[32mif [ "${TRAVIS_OS_NAME}" = "linux" ]; then[m
+[32m+[m[32m    if [ "$CXX" = "clang++" ]; then export CXX="clang++-3.7" CC="clang-3.7"; fi[m
+[32m+[m[32mfi[m
+[1mdiff --git a/external/googletest/ci/get-nprocessors.sh b/external/googletest/ci/get-nprocessors.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..43635e7[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/get-nprocessors.sh[m
+[36m@@ -0,0 +1,48 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[32m+[m[32m# This file is typically sourced by another script.[m
+[32m+[m[32m# if possible, ask for the precise number of processors,[m
+[32m+[m[32m# otherwise take 2 processors as reasonable default; see[m
+[32m+[m[32m# https://docs.travis-ci.com/user/speeding-up-the-build/#Makefile-optimization[m
+[32m+[m[32mif [ -x /usr/bin/getconf ]; then[m
+[32m+[m[32m    NPROCESSORS=$(/usr/bin/getconf _NPROCESSORS_ONLN)[m
+[32m+[m[32melse[m
+[32m+[m[32m    NPROCESSORS=2[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32m# as of 2017-09-04 Travis CI reports 32 processors, but GCC build[m
+[32m+[m[32m# crashes if parallelized too much (maybe memory consumption problem),[m
+[32m+[m[32m# so limit to 4 processors for the time being.[m
+[32m+[m[32mif [ $NPROCESSORS -gt 4 ] ; then[m
+[32m+[m	[32mecho "$0:Note: Limiting processors to use by make from $NPROCESSORS to 4."[m
+[32m+[m	[32mNPROCESSORS=4[m
+[32m+[m[32mfi[m
+[1mdiff --git a/external/googletest/ci/install-linux.sh b/external/googletest/ci/install-linux.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..02a1943[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/install-linux.sh[m
+[36m@@ -0,0 +1,49 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[32m+[m[32mset -eu[m
+[32m+[m
+[32m+[m[32mif [ "${TRAVIS_OS_NAME}" != linux ]; then[m
+[32m+[m[32m    echo "Not a Linux build; skipping installation"[m
+[32m+[m[32m    exit 0[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m
+[32m+[m[32mif [ "${TRAVIS_SUDO}" = "true" ]; then[m
+[32m+[m[32m    echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | \[m
+[32m+[m[32m        sudo tee /etc/apt/sources.list.d/bazel.list[m
+[32m+[m[32m    curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -[m
+[32m+[m[32m    sudo apt-get update && sudo apt-get install -y bazel gcc-4.9 g++-4.9 clang-3.7[m
+[32m+[m[32melif [ "${CXX}" = "clang++" ]; then[m
+[32m+[m[32m    # Use ccache, assuming $HOME/bin is in the path, which is true in the Travis build environment.[m
+[32m+[m[32m    ln -sf /usr/bin/ccache $HOME/bin/${CXX};[m
+[32m+[m[32m    ln -sf /usr/bin/ccache $HOME/bin/${CC};[m
+[32m+[m[32mfi[m
+[1mdiff --git a/external/googletest/ci/install-osx.sh b/external/googletest/ci/install-osx.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6550ff5[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/install-osx.sh[m
+[36m@@ -0,0 +1,39 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[32m+[m[32mset -eu[m
+[32m+[m
+[32m+[m[32mif [ "${TRAVIS_OS_NAME}" != "osx" ]; then[m
+[32m+[m[32m    echo "Not a macOS build; skipping installation"[m
+[32m+[m[32m    exit 0[m
+[32m+[m[32mfi[m
+[32m+[m
+[32m+[m[32mbrew install ccache[m
+[1mdiff --git a/external/googletest/ci/log-config.sh b/external/googletest/ci/log-config.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..5fef119[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/log-config.sh[m
+[36m@@ -0,0 +1,51 @@[m
+[32m+[m[32m#!/usr/bin/env bash[m
+[32m+[m[32m# Copyright 2017 Google Inc.[m
+[32m+[m[32m# All Rights Reserved.[m
+[32m+[m[32m#[m
+[32m+[m[32m#[m
+[32m+[m[32m# Redistribution and use in source and binary forms, with or without[m
+[32m+[m[32m# modification, are permitted provided that the following conditions are[m
+[32m+[m[32m# met:[m
+[32m+[m[32m#[m
+[32m+[m[32m#     * Redistributions of source code must retain the above copyright[m
+[32m+[m[32m# notice, this list of conditions and the following disclaimer.[m
+[32m+[m[32m#     * Redistributions in binary form must reproduce the above[m
+[32m+[m[32m# copyright notice, this list of conditions and the following disclaimer[m
+[32m+[m[32m# in the documentation and/or other materials provided with the[m
+[32m+[m[32m# distribution.[m
+[32m+[m[32m#     * Neither the name of Google Inc. nor the names of its[m
+[32m+[m[32m# contributors may be used to endorse or promote products derived from[m
+[32m+[m[32m# this software without specific prior written permission.[m
+[32m+[m[32m#[m
+[32m+[m[32m# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS[m
+[32m+[m[32m# "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR[m
+[32m+[m[32m# A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT[m
+[32m+[m[32m# OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,[m
+[32m+[m[32m# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT[m
+[32m+[m[32m# LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,[m
+[32m+[m[32m# DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY[m
+[32m+[m[32m# THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT[m
+[32m+[m[32m# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE[m
+[32m+[m[32m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[m
+[32m+[m
+[32m+[m[32mset -e[m
+[32m+[m
+[32m+[m[32m# ccache on OS X needs installation first[m
+[32m+[m[32m# reset ccache statistics[m
+[32m+[m[32mccache --zero-stats[m
+[32m+[m
+[32m+[m[32mecho PATH=${PATH}[m
+[32m+[m
+[32m+[m[32mecho "Compiler configuration:"[m
+[32m+[m[32mecho CXX=${CXX}[m
+[32m+[m[32mecho CC=${CC}[m
+[32m+[m[32mecho CXXFLAGS=${CXXFLAGS}[m
+[32m+[m
+[32m+[m[32mecho "C++ compiler version:"[m
+[32m+[m[32m${CXX} --version || echo "${CXX} does not seem to support the --version flag"[m
+[32m+[m[32m${CXX} -v || echo "${CXX} does not seem to support the -v flag"[m
+[32m+[m
+[32m+[m[32mecho "C compiler version:"[m
+[32m+[m[32m${CC} --version || echo "${CXX} does not seem to support the --version flag"[m
+[32m+[m[32m${CC} -v || echo "${CXX} does not seem to support the -v flag"[m
+[1mdiff --git a/external/googletest/ci/travis.sh b/external/googletest/ci/travis.sh[m
+[1mnew file mode 100644[m
+[1mindex 0000000..2dda68f[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/ci/travis.sh[m
+[36m@@ -0,0 +1,36 @@[m
+[32m+[m[32m#!/usr/bin/env sh[m
+[32m+[m[32mset -evx[m
+[32m+[m
+[32m+[m[32m. ci/get-nprocessors.sh[m
+[32m+[m
+[32m+[m[32m# if possible, ask for the precise number of processors,[m
+[32m+[m[32m# otherwise take 2 processors as reasonable default; see[m
+[32m+[m[32m# https://docs.travis-ci.com/user/speeding-up-the-build/#Makefile-optimization[m
+[32m+[m[32mif [ -x /usr/bin/getconf ]; then[m
+[32m+[m[32m    NPROCESSORS=$(/usr/bin/getconf _NPROCESSORS_ONLN)[m
+[32m+[m[32melse[m
+[32m+[m[32m    NPROCESSORS=2[m
+[32m+[m[32mfi[m
+[32m+[m[32m# as of 2017-09-04 Travis CI reports 32 processors, but GCC build[m
+[32m+[m[32m# crashes if parallelized too much (maybe memory consumption problem),[m
+[32m+[m[32m# so limit to 4 processors for the time being.[m
+[32m+[m[32mif [ $NPROCESSORS -gt 4 ] ; then[m
+[32m+[m	[32mecho "$0:Note: Limiting processors to use by make from $NPROCESSORS to 4."[m
+[32m+[m	[32mNPROCESSORS=4[m
+[32m+[m[32mfi[m
+[32m+[m[32m# Tell make to use the processors. No preceding '-' required.[m
+[32m+[m[32mMAKEFLAGS="j${NPROCESSORS}"[m
+[32m+[m[32mexport MAKEFLAGS[m
+[32m+[m
+[32m+[m[32menv | sort[m
+[32m+[m
+[32m+[m[32mmkdir build || true[m
+[32m+[m[32mcd build[m
+[32m+[m[32mcmake -Dgtest_build_samples=ON \[m
+[32m+[m[32m      -Dgtest_build_tests=ON \[m
+[32m+[m[32m      -Dgmock_build_tests=ON \[m
+[32m+[m[32m      -DCMAKE_CXX_FLAGS=$CXX_FLAGS \[m
+[32m+[m[32m      -DCMAKE_BUILD_TYPE=$BUILD_TYPE \[m
+[32m+[m[32m      ..[m
+[32m+[m[32mmake[m
+[32m+[m[32mCTEST_OUTPUT_ON_FAILURE=1 make test[m
+[1mdiff --git a/external/googletest/configure.ac b/external/googletest/configure.ac[m
+[1mnew file mode 100644[m
+[1mindex 0000000..751b9ba[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/configure.ac[m
+[36m@@ -0,0 +1,16 @@[m
+[32m+[m[32mAC_INIT([Google C++ Mocking and Testing Frameworks],[m
+[32m+[m[32m        [1.8.0],[m
+[32m+[m[32m        [googlemock@googlegroups.com],[m
+[32m+[m[32m        [googletest])[m
+[32m+[m
+[32m+[m[32m# Provide various options to initialize the Autoconf and configure processes.[m
+[32m+[m[32mAC_PREREQ([2.59])[m
+[32m+[m[32mAC_CONFIG_SRCDIR([./README.md])[m
+[32m+[m[32mAC_CONFIG_AUX_DIR([build-aux])[m
+[32m+[m[32mAC_CONFIG_FILES([Makefile])[m
+[32m+[m[32mAC_CONFIG_SUBDIRS([googletest googlemock])[m
+[32m+[m
+[32m+[m[32mAM_INIT_AUTOMAKE[m
+[32m+[m
+[32m+[m[32m# Output the generated files. No further autoconf macros may be used.[m
+[32m+[m[32mAC_OUTPUT[m
+[1mdiff --git a/external/googletest/googlemock/CHANGES b/external/googletest/googlemock/CHANGES[m
+[1mnew file mode 100644[m
+[1mindex 0000000..4328ece[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/googlemock/CHANGES[m
+[36m@@ -0,0 +1,126 @@[m
+[32m+[m[32mChanges for 1.7.0:[m
+[32m+[m
+[32m+[m[32m* All new improvements in Google Test 1.7.0.[m
+[32m+[m[32m* New feature: matchers DoubleNear(), FloatNear(),[m
+[32m+[m[32m  NanSensitiveDoubleNear(), NanSensitiveFloatNear(),[m
+[32m+[m[32m  UnorderedElementsAre(), UnorderedElementsAreArray(), WhenSorted(),[m
+[32m+[m[32m  WhenSortedBy(), IsEmpty(), and SizeIs().[m
+[32m+[m[32m* Improvement: Google Mock can now be built as a DLL.[m
+[32m+[m[32m* Improvement: when compiled by a C++11 compiler, matchers AllOf()[m
+[32m+[m[32m  and AnyOf() can accept an arbitrary number of matchers.[m
+[32m+[m[32m* Improvement: when compiled by a C++11 compiler, matchers[m
+[32m+[m[32m  ElementsAreArray() can accept an initializer list.[m
+[32m+[m[32m* Improvement: when exceptions are enabled, a mock method with no[m
+[32m+[m[32m  default action now throws instead crashing the test.[m
+[32m+[m[32m* Improvement: added class testing::StringMatchResultListener to aid[m
+[32m+[m[32m  definition of composite matchers.[m
+[32m+[m[32m* Improvement: function return types used in MOCK_METHOD*() macros can[m
+[32m+[m[32m  now contain unprotected commas.[m
+[32m+[m[32m* Improvement (potentially breaking): EXPECT_THAT() and ASSERT_THAT()[m
+[32m+[m[32m  are now more strict in ensuring that the value type and the matcher[m
+[32m+[m[32m  type are compatible, catching potential bugs in tests.[m
+[32m+[m[32m* Improvement: Pointee() now works on an optional<T>.[m
+[32m+[m[32m* Improvement: the ElementsAreArray() matcher can now take a vector or[m
+[32m+[m[32m  iterator range as input, and makes a copy of its input elements[m
+[32m+[m[32m  before the conversion to a Matcher.[m
+[32m+[m[32m* Improvement: the Google Mock Generator can now generate mocks for[m
+[32m+[m[32m  some class templates.[m
+[32m+[m[32m* Bug fix: mock object destruction triggerred by another mock object's[m
+[32m+[m[32m  destruction no longer hangs.[m
+[32m+[m[32m* Improvement: Google Mock Doctor works better with newer Clang and[m
+[32m+[m[32m  GCC now.[m
+[32m+[m[32m* Compatibility fixes.[m
+[32m+[m[32m* Bug/warning fixes.[m
+[32m+[m
+[32m+[m[32mChanges for 1.6.0:[m
+[32m+[m
+[32m+[m[32m* Compilation is much faster and uses much less memory, especially[m
+[32m+[m[32m  when the constructor and destructor of a mock class are moved out of[m
+[32m+[m[32m  the class body.[m
+[32m+[m[32m* New matchers: Pointwise(), Each().[m
+[32m+[m[32m* New actions: ReturnPointee() and ReturnRefOfCopy().[m
+[32m+[m[32m* CMake support.[m
+[32m+[m[32m* Project files for Visual Studio 2010.[m
+[32m+[m[32m* AllOf() and AnyOf() can handle up-to 10 arguments now.[m
+[32m+[m[32m* Google Mock doctor understands Clang error messages now.[m
+[32m+[m[32m* SetArgPointee<> now accepts string literals.[m
+[32m+[m[32m* gmock_gen.py handles storage specifier macros and template return[m
+[32m+[m[32m  types now.[m
+[32m+[m[32m* Compatibility fixes.[m
+[32m+[m[32m* Bug fixes and implementation clean-ups.[m
+[32m+[m[32m* Potentially incompatible changes: disables the harmful 'make install'[m
+[32m+[m[32m  command in autotools.[m
+[32m+[m
+[32m+[m[32mPotentially breaking changes:[m
+[32m+[m
+[32m+[m[32m* The description string for MATCHER*() changes from Python-style[m
+[32m+[m[32m  interpolation to an ordinary C++ string expression.[m
+[32m+[m[32m* SetArgumentPointee is deprecated in favor of SetArgPointee.[m
+[32m+[m[32m* Some non-essential project files for Visual Studio 2005 are removed.[m
+[32m+[m
+[32m+[m[32mChanges for 1.5.0:[m
+[32m+[m
+[32m+[m[32m * New feature: Google Mock can be safely used in multi-threaded tests[m
+[32m+[m[32m   on platforms having pthreads.[m
+[32m+[m[32m * New feature: function for printing a value of arbitrary type.[m
+[32m+[m[32m * New feature: function ExplainMatchResult() for easy definition of[m
+[32m+[m[32m   composite matchers.[m
+[32m+[m[32m * The new matcher API lets user-defined matchers generate custom[m
+[32m+[m[32m   explanations more directly and efficiently.[m
+[32m+[m[32m * Better failure messages all around.[m
+[32m+[m[32m * NotNull() and IsNull() now work with smart pointers.[m
+[32m+[m[32m * Field() and Property() now work when the matcher argument is a pointer[m
+[32m+[m[32m   passed by reference.[m
+[32m+[m[32m * Regular expression matchers on all platforms.[m
+[32m+[m[32m * Added GCC 4.0 support for Google Mock Doctor.[m
+[32m+[m[32m * Added gmock_all_test.cc for compiling most Google Mock tests[m
+[32m+[m[32m   in a single file.[m
+[32m+[m[32m * Significantly cleaned up compiler warnings.[m
+[32m+[m[32m * Bug fixes, better test coverage, and implementation clean-ups.[m
+[32m+[m
+[32m+[m[32m Potentially breaking changes:[m
+[32m+[m
+[32m+[m[32m * Custom matchers defined using MatcherInterface or MakePolymorphicMatcher()[m
+[32m+[m[32m   need to be updated after upgrading to Google Mock 1.5.0; matchers defined[m
+[32m+[m[32m   using MATCHER or MATCHER_P* aren't affected.[m
+[32m+[m[32m * Dropped support for 'make install'.[m
+[32m+[m
+[32m+[m[32mChanges for 1.4.0 (we skipped 1.2.* and 1.3.* to match the version of[m
+[32m+[m[32mGoogle Test):[m
+[32m+[m
+[32m+[m[32m * Works in more environments: Symbian and minGW, Visual C++ 7.1.[m
+[32m+[m[32m * Lighter weight: comes with our own implementation of TR1 tuple (no[m
+[32m+[m[32m   more dependency on Boost!).[m
+[32m+[m[32m * New feature: --gmock_catch_leaked_mocks for detecting leaked mocks.[m
+[32m+[m[32m * New feature: ACTION_TEMPLATE for defining templatized actions.[m
+[32m+[m[32m * New feature: the .After() clause for specifying expectation order.[m
+[32m+[m[32m * New feature: the .With() clause for specifying inter-argument[m
+[32m+[m[32m   constraints.[m
+[32m+[m[32m * New feature: actions ReturnArg<k>(), ReturnNew<T>(...), and[m
+[32m+[m[32m   DeleteArg<k>().[m
+[32m+[m[32m * New feature: matchers Key(), Pair(), Args<...>(), AllArgs(), IsNull(),[m
+[32m+[m[32m   and Contains().[m
+[32m+[m[32m * New feature: utility class MockFunction<F>, useful for checkpoints, etc.[m
+[32m+[m[32m * New feature: functions Value(x, m) and SafeMatcherCast<T>(m).[m
+[32m+[m[32m * New feature: copying a mock object is rejected at compile time.[m
+[32m+[m[32m * New feature: a script for fusing all Google Mock and Google Test[m
+[32m+[m[32m   source files for easy deployment.[m
+[32m+[m[32m * Improved the Google Mock doctor to diagnose more diseases.[m
+[32m+[m[32m * Improved the Google Mock generator script.[m
+[32m+[m[32m * Compatibility fixes for Mac OS X and gcc.[m
+[32m+[m[32m * Bug fixes and implementation clean-ups.[m
+[32m+[m
+[32m+[m[32mChanges for 1.1.0:[m
+[32m+[m
+[32m+[m[32m * New feature: ability to use Google Mock with any testing framework.[m
+[32m+[m[32m * New feature: macros for easily defining new matchers[m
+[32m+[m[32m * New feature: macros for easily defining new actions.[m
+[32m+[m[32m * New feature: more container matchers.[m
+[32m+[m[32m * New feature: actions for accessing function arguments and throwing[m
+[32m+[m[32m   exceptions.[m
+[32m+[m[32m * Improved the Google Mock doctor script for diagnosing compiler errors.[m
+[32m+[m[32m * Bug fixes and implementation clean-ups.[m
+[32m+[m
+[32m+[m[32mChanges for 1.0.0:[m
+[32m+[m
+[32m+[m[32m * Initial Open Source release of Google Mock[m
+[1mdiff --git a/external/googletest/googlemock/CMakeLists.txt b/external/googletest/googlemock/CMakeLists.txt[m
+[1mnew file mode 100644[m
+[1mindex 0000000..bac2e3b[m
+[1m--- /dev/null[m
+[1m+++ b/external/googletest/googlemock/CMakeLists.txt[m
+[36m@@ -0,0 +1,242 @@[m
+[32m+[m[32m########################################################################[m
+[32m+[m[32m# CMake build script for Google Mock.[m
+[32m+[m[32m#[m
+[32m+[m[32m# To run the tests for Google Mock itself on Linux, use 'make test' or[m
+[32m+[m[32m# ctest.  You can select which tests to run using 'ctest -R regex'.[m
+[32m+[m[32m# For more options, run 'ctest --help'.[m
+[32m+[m
+[32m+[m[32m# BUILD_SHARED_LIBS is a standard CMake variable, but we declare it here to[m
+[32m+[m[32m# make it prominent in the GUI.[m
+[32m+[m[32moption(BUILD_SHARED_LIBS "Build shared libraries (DLLs)." OFF)[m
+[32m+[m
+[32m+[m[32moption(gmock_build_tests "Build all of Google Mock's own tests." OFF)[m
+[32m+[m
+[32m+[m[32m# A directory to find Google Test sources.[m
+[32m+[m[32mif (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/gtest/CMakeLists.txt")[m
+[32m+[m[32m  set(gtest_dir gtest)[m
+[32m+[m[32melse()[m
+[32m+[m[32m  set(gtest_dir ../googletest)[m
+[32m+[m[32mendif()[m
+[32m+[m
+[32m+[m[32m# Defines pre_project_set_up_hermetic_build() and set_up_hermetic_build().[m
+[32m+[m[32minclude("${gtest_dir}/cmake/hermetic_build.cmake" OPTIONAL)[m
+[32m+[m
+[32m+[m[32mif (COMMAND pre_project_set_up_hermetic_build)[m
+[32m+[m[32m  # Google Test also calls hermetic setup functions from add_subdirectory,[m
+[32m+[m[32m  # although its changes will not affect things at the current scope.[m
+[32m+[m[32m  pre_project_set_up_hermetic_build()[m
+[32m+[m[32mendif()[m
+[32m+[m
+[32m+[m[32m########################################################################[m
+[32m+[m[32m#[m
+[32m+[m[32m# Project-wide settings[m
+[32m+[m
+[32m+[m[32m# Name of the project.[m
+[32m+[m[32m#[m
+[32m+[m[32m# CMake files in this project can refer to the root source directory[m
+[32m+[m[32m# as ${gmock_SOURCE_DIR} and to the root binary directory as[m
+[32m+[m[32m# ${gmock_BINARY_DIR}.[m
+[32m+[m[32m# Language "C" is required for find_package(Threads).[m
+[32m+[m[32mif (CMAKE_VERSION VERSION_LESS 3.0)[m
+[32m+[m[32m  project(gmock CXX C)[m
+[32m+[m[32melse()[m
+[32m+[m[32m  cmake_policy(SET CMP0048 NEW)[m
+[32m+[m[32m  project(gmock VERSION 1.9.0 LANGUAGES CXX C)[m
+[32m+[m[32mendif()[m
+[32m+[m[32mcmake_minimum_required(VERSION 2.6.4)[m
+[32m+[m
+[32m+[m[32mif (COMMAND set_up_hermetic_build)[m
+[32m+[m[32m  set_up_hermetic_build()[m
+[32m+[m[32mendif()[m
+[32m+[m
+[32m+[m[32m# Instructs CMake to process Google Test's CMakeLists.txt and add its[m
+[32m+[m[32m# targets to the current scope.  We are placing Google Test's binary[m
+[32m+[m[32m# directory in a subdirectory of our own as VC compilation may break[m
+[32m+[m[32m# if they are the same (the default).[m
+[32m+[m[32madd_subdirectory("${gtest_dir}" "${gmock_BINARY_DIR}/gtest")[m
+[32m+[m
+[32m+[m[32m# Although Google Test's CMakeLists.txt calls this function, the[m
+[32m+[m[32m# changes there don't affect the current scope.  Therefore we have to[m
+[32m+[m[32m# call it again here.[m
+[32m+[m[32mconfig_compiler_and_linker()  # from ${gtest_dir}/cmake/internal_utils.cmake[m
+[32m+[m
+[32m+[m[32m# Adds Google Mock's and Google Test's header directories to the search path.[m
+[32m+[m[32minclude_directories("${gmock_SOURCE_DIR}/include"[m
+[32m+[m[32m                    "${gmock_SOURCE_DIR}"[m
+[32m+[m[32m                    "${gtest_SOURCE_DIR}/include"[m
+[32m+[m[32m                    # This directory is needed to build directly from Google[m
+[32m+[m[32m                    # Test sources.[m
+[32m+[m[32m                    "${gtest_SOURCE_DIR}")[m
+[32m+[m
+[32m+[m[32m# Summary of tuple support for Microsoft Visual Studio:[m
+[32m+[m[32m# Compiler    version(MS)  version(cmake)  Support[m
+[32m+[m[32m# ----------  -----------  --------------  -----------------------------[m
+[32m+[m[32m# <= VS 2010  <= 10        <= 1600         Use Google Tests's own tuple.[m
+[32m+[m[32m# VS 2012     11           1700            std::tr1::tuple + _VARIADIC_MAX=10[m
+[32m+[m[32m# VS 2013     12           1800            std::tr1::tuple[m
+[32m+[m[32m# VS 2015     14           1900            std::tuple[m
+[32m+[m[32m# VS 2017     15           >= 1910         std::tuple[m
+[32m+[m[32mif (MSVC AND MSVC_VERSION EQUAL 1700)[m
+[32m+[m[32m  add_definitions(/D _VARIADIC_MAX=10)[m
+[32m+[m[32mendif()[m
+[32m+[m
+[32m+[m[32m########################################################################[m
+[32m+[m[32m#[m
+[32m+[m[32m# Defines the gmock & gmock_main libraries.  User tests should link[m
+[32m+[m[32m# with one of them.[m
+[32m+[m
+[32m+[m[32m# Google Mock libraries.  We build them using more strict warnings than what[m
+[32m+[m[32m# are used for other targets, to ensure that Google Mock can be compiled by[m
+[32m+[m[32m# a user aggressive about warnings.[m
+[32m+[m[32mif (MSVC)[m
+[32m+[m[32m  cxx_library(gmock[m
+[32m+[m[32m              "${cxx_strict}"[m
+[32m+[m[32m              "${gtest_dir}/src/gtest-all.cc"[m
+[32m+[m[32m              src/gmock-all.cc)[m
+[32m+[m
+[32m+[m[32m  cxx_library(gmock_main[m
+[32m+[m[32m              "${cxx_strict}"[m
+[32m+[m[32m              "${gtest_dir}/src/gtest-all.cc"[m
+[32m+[m[32m              src/gmock-all.cc[m
+[32m+[m[32m              src/gmock_main.cc)[m
+[32m+[m[32melse()[m
+[32m+[m[32m  cxx_library(gmock "${cxx_strict}" src/gmock-all.cc)[m
+[32m+[m[32m  target_link_libraries(gmock gtest)[m
+[32m+[m[32m  cxx_library(gmock_main "${cxx_strict}" src/gmock_main.cc)[m
+[32m+[m[32m  target_link_libraries(gmock_main gmock)[m
+[32m+[m[32mendif()[m
+[32m+[m
+[32m+[m[32m# If the CMake version supports it, attach header directory information[m
+[32m+[m[32m# to the targets for when we are part of a parent build (ie being pulled[m
+[32m+[m[32m# in via add_subdirectory() rather than being a standalone build).[m
+[32m+[m[32mif (DEFINED CMAKE_VERSION AND NOT "${CMAKE_VERSION}" VERSION_LESS "2.8.11")[m
+[32m+[m[32m  target_include_directories(gmock      SYSTEM INTERFACE "${gmock_SOURCE_DIR}/include")[m
+[32m+[m[32m  target_include_directories(gmock_main SYSTEM INTERFACE "${gmock_SOURCE_DIR}/include")[m
+[32m+[m[32mendif()[m
+[32m+[m
+[32m+[m[32m########################################################################[m
+[32m+[m[32m#[m
+[32m+[m[32m# Install rules[m
+[32m+[m[32mif(INSTALL_GMOCK)[m
+[32m+[m[32m  install(TARGETS gmock gmock_main[m
+[32m+[m[32m    RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"[m
+[32m+[m[32m    LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"[m
+[32m+[m[32m    ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}")[m
+[32m+[m[32m  install(DIRECTORY "${gmock_SOURCE_DIR}/include/gmock"[m
+[32m+[m[32m    DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")[m
+[32m+[m
+[32m+[m[32m  # configure and install pkgconfig files[m
+[32m+[m[32m  configure_file([m
+[32m+[m[32m    cmake/gmock.pc.in[m
+[32m+[m[32m    "${CMAKE_BINARY_DIR}/gmock.pc"[m
+[32m+[m[32m    @ONLY)[m
+[32m+[m[32m  configure_file([m
+[32m+[m[32m    cmake/gmock_main.pc.in[m
+[32m+[m[32m    "${CMAKE_BINARY_DIR}/gmock_main.pc"[m
+[32m+[m[32m    @ONLY)[m
+[32m+[m[32m  install(FILES "${CMAKE_BINARY_DIR}/gmock.pc" "${CMAKE_BINARY_DIR}/gmock_main.pc"[m
+[32m+[m[32m    DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")[m
+[32m+[m[32mendif()[m
+[32m+[m
+[32m+[m[32m########################################################################[m
+[32m+[m[32m#[m
+[32m+[m[32m# Google Mock's own tests.[m
+[32m+[m[32m#[m
+[32m+[m[32m# You can skip this section if you aren't interested in testing[m
+[32m+[m[32m# Google Mock itself.[m
+[32m+[m[32m#[m
+[32m+[m[32m# The tests are not built by default.  To build them, set the[m
+[32m+[m[32m# gmock_build_tests option to ON.  You can do it by running ccmake[m
+[32m+[m[32m# or specifying the -Dgmock_build_tests=ON flag when running cmake.[m
+[32m+[m
+[32m+[m[32mif (gmock_build_tests)[m
+[32m+[m[32m  # This must be set in the root directory for the tests to be run by[m
+[32m+[m[32m  # 'make test' or ctest.[m
+[32m+[m[32m  enable_testing()[m
+[32m+[m
+[32m+[m[32m  ############################################################[m
+[32m+[m[32m  # C++ tests built with standard compiler flags.[m
+[32m+[m
+[32m+[m[32m  cxx_test(gmock-actions_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-cardinalities_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock_ex_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-generated-actions_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-generated-function-mockers_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-generated-internal-utils_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-generated-matchers_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-internal-utils_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-matchers_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-more-actions_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-nice-strict_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-port_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock-spec-builders_test gmock_main)[m
+[32m+[m[32m  cxx_test(gmock_link_test gmock_main test/gmock_link2_test.cc)[m
+[32m+[m[32m  cxx_test(gmock_test gmock_main)[m
+[32m+[m
+[32m+[m[32m  if (DEFINED GTEST_HAS_PTHREAD)[m
+[32m+[m[32m    cxx_test(gmock_stress_test gmock)[m
+[32m+[m[32m  endif()[m
+[32m+[m
+[32m+[m[32m  # gmock_all_test is commented to save time building and running tests.[m
+[32m+[m[32m  # Uncomment if necessary.[m
+[32m+[m[32m  # cxx_test(gmock_all_test gmock_main)[m
+[32m+[m
+[32m+[m[32m  ############################################################[m
+[32m+[m[32m  # C++ tests built with non-standard compiler flags.[m
+[32m+[m
+[32m+[m[32m  if (MSVC)[m
+[32m+[m[32m    cxx_library(gmock_main_no_exception "${cxx_no_exception}"[m
+[32m+[m[32m      "${gtest_dir}/src/gtest-all.cc" src/gmock-all.cc src/gmock_main.cc)[m
+[32m+[m
+[32m+[m[32m    cxx_library(gmock_main_no_rtti "${cxx_no_rtti}"[m
+[32m+[m[32m      "${gtest_dir}/src/gtest-all.cc" src/gmock-all.cc src/gmock_main.cc)[m
+[32m+[m
+[32m+[m[32m    if (MSVC_VERSION LESS 1600)  # 1600 is Visual Studio 2010.[m
+[32m+[m[32m      # Visual Studio 2010, 2012, and 2013 define symbols in std::tr1 that[m
+[32m+[m[32m      # conflict with our own definitions. Therefore using our own tuple does not[m
+[32m+[m[32m      # work on those compilers.[m
+[32m+[m[32m      cxx_library(gmock_main_use_own_tuple "${cxx_use_own_tuple}"[m
+[32m+[m[32m        "${gtest_dir}/src/gtest-all.cc" src/gmock-all.cc src/gmock_main.cc)[m
+[32m+[m
+[32m+[m[32m      cxx_test_with_flags(gmock_use_own_tuple_test "${cxx_use_own_tuple}"[m
+[32m+[m[32m        gmock_main_use_own_tuple test/gmock-spec-builders_test.cc)[m
+[32m+[m[32m    endif()[m
+[32m+[m[32m  else()[m
+[32m+[m[32m    cxx_library(gmock_main_no_exception "${cxx_no_exception}" src/gmock_main.cc)[m
+[32m+[m[32m    targe
